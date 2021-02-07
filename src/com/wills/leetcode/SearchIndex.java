@@ -41,8 +41,19 @@ public class SearchIndex {
         int n = nums.length;
         int left = 0, right = nums.length -1, res = n;
         while(left <= right){
-            // 确定中间数， 为什么要 +left? 因为
+            // 确定中间数， 为什么要 +left? 因为要调整最新要遍历的数组到 1/2的位置
             int mid = ((right - left) >> 1) + left;
+            if(target <= nums[mid]){
+                // |___left____|___right____|
+                //      ↑ 取目标数组1/2左边的作为新的要遍历的数组
+                right = mid -1;
+                res = mid;
+            } else {
+                // |___left____|___right____|
+                //                  ↑ 取目标数组1/2右边的作为新的要遍历的数组
+                left = mid + 1;
+            }
+
         }
         return res;
     }
