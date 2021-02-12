@@ -41,7 +41,6 @@ public class RemoveElement {
                 flag ++;
             }
         }
-
         return flag;
     }
 }

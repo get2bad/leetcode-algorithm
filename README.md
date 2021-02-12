@@ -1,110 +1,343 @@
 # leetcode-algorithm
 > 本代码仓库是本菜鸟刷leetcode的记录，尽量保证每天一题(不保证突然兴起多刷几道题~~~)，奥利给，冲！
 
-## 1. 判断括号是否有效
+## 1. 判断括号是否有效 -> ValidParentheses
+
+> HashMap 还有 Stack 栈 最佳实践，Deque = Stack
 
 ```java
-// TODO 等待回来整理解题方法
+public static boolean isValid(String s) {
+        if(s.length() == 0 || s == null || s.length() %2 != 0) return false;
+        Deque<Character> deque = new ArrayDeque<>();
+        Map<Character,Character> source = new HashMap<>();
+        source.put(')','(');
+        source.put('}','{');
+        source.put(']','[');
+        for (char c : s.toCharArray()) {
+            if(c == '(' || c== '{' || c== '['){
+                deque.push(c);
+            } else {
+                // 如果 出栈匹配不上现在的遍历元素 就直接返回flase
+                if(deque.size() == 0 || source.get(c) != deque.pop()){
+                    return false;
+                }
+            }
+        }
+        return deque.size() == 0;
+    }
 ```
 
 
 
-## 2. 给定数组和目标值，找出数组元素相加等于目标值的索引Index
+## 2. 给定数组和目标值，找出数组元素相加等于目标值的索引Index -> SumTwoNumbers
 
 ```java
-// TODO 等待回来整理解题方法
+Integer[] nums = {3,2,4};
+Integer target = 6;
+List<Integer> res = new ArrayList();
+for (int i = 0; i < nums.length; i++) {
+    for (int j = i+1; j < nums.length; j++) {
+        if(nums[i] + nums[j] == target){
+            res.add(i);
+            res.add(j);
+        }
+    }
+}
+int[] ress = res.stream().mapToInt(Integer::intValue).toArray();
+Arrays.stream(ress).forEach(System.out::println);
 ```
 
 
 
-## 3. strStr函数 找出target出现在source的第一个索引
+## 3. strStr函数 找出target出现在source的第一个索引 -> StrStr
 
 本题可以直接调用indexOf方法，但是这样会过于简单，所以我们使用startWith来实现一下，后期会补充不用工具api来实现(找出target第一个字母在source的位置，然后截取source与target相同长度的字符串，进行比较，不对就继续遍历，找不到就返回-1)
 
 ```java
-// TODO 等待回来整理解题方法
+public static int strStr(String haystack, String needle) {
+        if(needle.equals("")) return 0;
+        int res = 0;
+        // 沿用之前的那个寻找公共字符串的题进行解出
+        while(!haystack.startsWith(needle)){
+            res ++;
+            if("".equals(haystack)) return -1;
+            haystack = haystack.substring(1);
+        }
+        return res;
+    }
 ```
 
 
 
-## 4. 查找数组中目标值的索引index
+## 4. 查找数组中目标值的索引index -> SearchIndex
 
 本题直接用二分查找法解出，后面多补充了一个笨方法来解题
 
 ```java
-// TODO 等待回来整理解题方法
+/**
+     * 使用二分查找法
+     */
+    public static int searchInsert(int[] nums, int target) {
+        int n = nums.length;
+        int left = 0, right = nums.length -1, res = n;
+        while(left <= right){
+            // 确定中间数， 为什么要 +left? 因为要调整最新要遍历的数组到 1/2的位置
+            int mid = ((right - left) >> 1) + left;
+            if(target <= nums[mid]){
+                // |___left____|___right____|
+                //      ↑ 取目标数组1/2左边的作为新的要遍历的数组
+                right = mid -1;
+                res = mid;
+            } else {
+                // |___left____|___right____|
+                //                  ↑ 取目标数组1/2右边的作为新的要遍历的数组
+                left = mid + 1;
+            }
+
+        }
+        return res;
+    }
+
+    /**
+     * 笨方法解决，挨个遍历
+     */
+    public static int searchInsert1(int[] nums, int target) {
+        for (int i = 0; i < nums.length; i++) {
+            if(nums[i] == target){
+                return i;
+            } else{
+                if(nums[0]> target) return 0;
+                if(i+1 >= nums.length) return nums.length;
+                if(nums[i] < target && nums[i+1] > target){
+                    return i +1;
+                }
+            }
+        }
+        return 0;
+    }
 ```
 
 
 
-## 5. 查找罗马数字
+## 5. 查找罗马数字 -> RomaNumber
 
 ```
 MCMXCIV -> 1994
 ```
 
 ```java
-// TODO 等待回来整理解题方法
+public static int romanToInt(String s) {
+    int sum = 0;
+    int preNum = getValue(s.charAt(0));
+    for(int i = 1;i < s.length(); i ++) {
+        int num = getValue(s.charAt(i));
+        if(preNum < num) {
+            sum -= preNum;
+        } else {
+            sum += preNum;
+        }
+        preNum = num;
+    }
+    sum += preNum;
+    return sum;
+}
+
+private static int getValue(char ch) {
+    switch(ch) {
+        case 'I': return 1;
+        case 'V': return 5;
+        case 'X': return 10;
+        case 'L': return 50;
+        case 'C': return 100;
+        case 'D': return 500;
+        case 'M': return 1000;
+        default: return 0;
+    }
+}
 ```
 
 
 
-## 6. 判断一个数字是否是回文数
+## 6. 判断一个数字是否是回文数 -> ReverseString
 
 简单题 大学入门题目
 
 ```java
-// TODO 等待回来整理解题方法
+public static boolean isPalindrome(int x) {
+    // 先转换为字符串
+    char[] source  = (x + "").toCharArray();
+    int start = 0;
+    int end = source.length - 1;
+    boolean flag = true;
+    while(start <= source.length / 2){
+        if(source[start] != source[end]){
+            flag = false;
+            break;
+        }
+        start ++;
+        end --;
+    }
+    return flag;
+}
 ```
 
 
 
-## 7. 将数字进行倒过来输出
+## 7. 将数字进行倒过来输出 -> ReverseNumber
 
 同上一道题
 
 ```java
-// TODO 等待回来整理解题方法
+public static int reverse(int x) {
+    long res = 0;
+    while(x != 0){
+        res = (res * 10) + (x % 10);
+        x = x / 10;
+    }
+    // 注意一定要考虑溢出性检查
+    if(res != (int)res){
+        return 0;
+    }
+    return (int)res;
+}
 ```
 
 
 
-## 8. 移除目标数组与target相同的数字，并且返回操作结束后的数组新长度
+## 8. 移除目标数组与target相同的数字，并且返回操作结束后的数组新长度 -> RemoveDuplicatesFromSortedArray
 
 大学练手简单题
 
 ```java
-// TODO 等待回来整理解题方法
+public static int removeDuplicates(int[] nums) {
+    if (nums.length == 0) return 0;
+    int i = 0;
+    for (int j = 1; j < nums.length; j++) {
+        if (nums[j] != nums[i]) {
+            i++;
+            nums[i] = nums[j];
+        }
+    }
+    return i + 1;
+}
+public static int removeDuplicates1(int[] nums) {
+    int[] source = nums;
+    HashSet<Integer> set = new HashSet<>();
+    int flag = 0;
+    for (int i : source) {
+        boolean a = set.add(i);
+        if(a){
+            nums[flag] = i;
+            flag++;
+        }
+    }
+    return set.size();
+}
 ```
 
 
 
-## 9. 在空间复杂度O(1)下删除target指向的排序好的数组
+## 9. 在空间复杂度O(1)下删除target指向的排序好的数组 -> RemoveElement
 
 大学练手简单题，就是空间复杂度O(1)比较棘手而已
 
 ```java
-// TODO 等待回来整理解题方法
+public static int removeElement(int[] nums, int val) {
+    int flag = 0;
+    for (int i = 0; i < nums.length; i++) {
+        if(nums[i] != val){
+            // 如果当前遍历元素不等于目标要删除的元素，那么就进行重新赋值
+            nums[flag] = nums[i];
+            flag ++;
+        }
+    }
+    return flag;
+}
 ```
 
 
 
-## 10. 字符串数组最长公共前缀
+## 10. 字符串数组最长公共前缀 -> MostLongStrPrefix
 
 雷同于第三题
 
 ```java
-// TODO 等待回来整理解题方法
+public static String longestCommonPrefix(String[] strs) {
+    if(strs == null || strs.length == 0){
+        return "";
+    }
+    String res = strs[0];
+    for (String str : strs) {
+        while(!str.startsWith(res)){
+            if(res.length() == 0) return "";
+            res = res.substring(0,res.length() - 1);
+        }
+    }
+    return res;
+}
 ```
 
 
 
-## 11. 合并两个排序好的链表，合并后的链表也是保持顺序
+## 11. 合并两个排序好的链表，合并后的链表也是保持顺序 -> MergeTwoSortedLists
 
 稍微动一些脑筋题，不过也是简单题
 
 ```java
-// TODO 等待回来整理解题方法
+class ListNode {
+    int val;
+    ListNode next;
+
+    ListNode(int val) {
+        this.val = val;
+    }
+
+    ListNode(int val, ListNode next) {
+        this.val = val;
+        this.next = next;
+    }
+
+    @Override
+    public String toString() {
+        return "ListNode{" +
+                "val=" + val +
+                ", next=" + next +
+                '}';
+    }
+}
+
+public class MergeTwoSortedLists {
+
+    public static void main(String[] args) {
+        ListNode a = new ListNode(1,new ListNode(3,null));
+        ListNode b = new ListNode(2,new ListNode(4,null));
+        System.out.println(mergeTwoLists(a, b));
+    }
+
+    public static ListNode mergeTwoLists(ListNode l1, ListNode l2) {
+        // 声明一个空的 ListNode 对象，作为要返回的对象
+        ListNode dummy = new ListNode(0);
+        // 复制这个要返回的对象 (内存地址复制)
+        ListNode head = dummy;
+        // 循环方法传入的 ListNode，直到一方为null未知
+        while(l1 != null && l2 != null){
+            // 进行比较，如果l1.val < l2.val 那么就把head的 next 指向这个 l1.val
+            if(l1.val < l2.val){
+                head.next = l1;
+                l1 = l1.next;
+            } else {
+                // 如果是 l1.val >= l2.val 那么就把head的 next 指向这个 l2.val
+                head.next = l2;
+                l2 = l2.next;
+            }
+            // 将头结点指向下一个，供下一次循环赋值
+            head = head.next;
+        }
+        // 如果两个ListNode长度不相同，那么就进行直接追加(因为之前的while循环一定会循环到一个的next为null的情况)
+        head.next = l1 == null? l2:l1;
+        return dummy.next;
+    }
+}
 ```
 
 

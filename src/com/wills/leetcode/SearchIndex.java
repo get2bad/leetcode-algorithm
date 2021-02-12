@@ -33,9 +33,6 @@ public class SearchIndex {
 
     /**
      * 使用二分查找法
-     * @param nums
-     * @param target
-     * @return
      */
     public static int searchInsert(int[] nums, int target) {
         int n = nums.length;
@@ -60,9 +57,6 @@ public class SearchIndex {
 
     /**
      * 笨方法解决，挨个遍历
-     * @param nums
-     * @param target
-     * @return
      */
     public static int searchInsert1(int[] nums, int target) {
         for (int i = 0; i < nums.length; i++) {

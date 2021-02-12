@@ -4,7 +4,7 @@ package com.wills.leetcode;
  * @author 王帅
  * @date 2021-02-12 20:07:21
  * @description:
- * 会问字符串2
+ * 回文字符串2
  */
 public class ValidPalindrome2 {
 
