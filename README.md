@@ -145,3 +145,94 @@ public String countAndSay(int n) {
 }
 ```
 
+
+
+## 13.最大子序和
+
+本题有两种解题思路，但是题目要求是时间的复杂度为 O(N)，所以使用冒泡算法迭代遍历的方式显然是不符合要求(时间复杂度O(N^2))，所以我们使用"贪心算法"来解决：
+
+```java
+/**
+     * 使用贪心算法来（动态规划）解决本题,思路：
+     * 1. 声明一个res cur_num变量，res指向nums第一个元素，cur_num 初始值为0
+     * 2. 遍历这个Nums数组
+     * 3. 不使用if语句，我们使用Math.max找出两者的最大值
+     * 4.分别进行两步取max
+     * a. 当前遍历元素与 cur_num的sum 还有 当前元素的最大值。如果当前元素大于两者的加和，那么就相当于
+     * 重置当前遍历的元素的加和，中断之前的遍历
+     * b.取返回的 res 和 cur_nums的最大值，这一步的意义就是看当前 a 步的最大值与要返回的res相比的最大值，
+     * 找出 最大值进行返回
+     * 5. 返回结果 res
+     * 时间复杂度 O(n)
+     * 如果不懂，请看官方的解题思路： <a href="https://leetcode-cn.com/problems/maximum-subarray/solution/zui-da-zi-xu-he-by-leetcode-solution/">最大子序和</a>
+     *
+     * @param nums
+     * @return
+     */
+    public static int maxSubArray(int[] nums) {
+        if (nums.length == 1) return nums[0];
+        int res = nums[0], cur_num = 0;
+        for (int i = 1; i < nums.length; i++) {
+            cur_num = Math.max(nums[i], cur_num + nums[i]);
+
+            res = Math.max(cur_num, res);
+        }
+        return res;
+    }
+```
+
+
+
+## 14. 最后一个单词的长度
+
+但凡有点java 基础的都能在5秒做出来.... 不解读了，莫得意思~
+
+
+
+## 15.二进制求和
+
+答题思路(枯燥无味的1.最优解决办法 2.思路 3.笨方法)
+
+1. 末尾对齐相加法
+
+```java
+/**
+     * 使用末尾对齐的方式进行相加，保证了假如说 a b 字符串无法进行Integer.parseInt的时候的可行办法
+     *
+     * + '0' 啥意思？ 想一下大学学习的 ASCII，然后你懂得
+     */
+    public static String addBinary(String a,String b){
+        StringBuffer sb = new StringBuffer();
+
+        int n = Math.max(a.length(), b.length()), carry = 0;
+        for (int i = 0; i < n; ++i) {
+            carry += i < a.length() ? (a.charAt(a.length() - 1 - i) - '0') : 0;
+            carry += i < b.length() ? (b.charAt(b.length() - 1 - i) - '0') : 0;
+            sb.append((char) (carry % 2 + '0'));
+            carry /= 2;
+        }
+
+        if (carry > 0) {
+            sb.append('1');
+        }
+        sb.reverse();
+
+        return sb.toString();
+    }
+```
+
+2. 直接进行二进制位相加 （这样代码虽然明面上说可以，但是假如说有人钻牛角尖，输入很长的一串让你无法调用API进行转换咋办？）
+
+```java
+public static String addBinary(String a,String b){
+        return Integer.toBinaryString(
+                Integer.parseInt(a, 2) + Integer.parseInt(b, 2)
+        );
+    }
+```
+
+3. 将字符串直接 toCharArray 然后进行二进制判断叠加即可(太笨的方法了，就不展示代码了)
+
+
+
+## 16.
