@@ -1,6 +1,8 @@
 # leetcode-algorithm
 > 本代码仓库是本菜鸟刷leetcode的记录，尽量保证每天一题(不保证突然兴起多刷几道题~~~)，奥利给，冲！
 
+[toc]
+
 ## 1. 判断括号是否有效 -> ValidParentheses
 
 > HashMap 还有 Stack 栈 最佳实践，Deque = Stack
