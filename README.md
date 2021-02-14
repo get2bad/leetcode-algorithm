@@ -342,7 +342,7 @@ public class MergeTwoSortedLists {
 
 
 
-## 12. 外观数列
+## 12. 外观数列 -> CountAndSay
 
 本题是一个典型的递归方法的小题，本题难点在于对于遍历的数字个数的保存，以及状态的改变，还有返回的字符串叠加
 
@@ -380,7 +380,7 @@ public String countAndSay(int n) {
 
 
 
-## 13.最大子序和
+## 13.最大子序和 -> MaximumSubarray
 
 本题有两种解题思路，但是题目要求是时间的复杂度为 O(N)，所以使用冒泡算法迭代遍历的方式显然是不符合要求(时间复杂度O(N^2))，所以我们使用"贪心算法"来解决：
 
@@ -422,7 +422,7 @@ public String countAndSay(int n) {
 
 
 
-## 15.二进制求和
+## 15.二进制求和 -> ☆ BinaryAdd ☆
 
 答题思路(枯燥无味的1.最优解决办法 2.思路 3.笨方法)
 
@@ -468,7 +468,7 @@ public static String addBinary(String a,String b){
 
 
 
-## 16.判断回文字符串(忽略空格 / 标点符号 / 大小写)
+## 16.判断回文字符串(忽略空格 / 标点符号 / 大小写) -> ValidPalindrome
 
 ```java
 /**
@@ -509,7 +509,7 @@ public static String addBinary(String a,String b){
 
 
 
-## 17.回文字符串2
+## 17.回文字符串2 -> ValidPalindrome2
 
 > 本题的妙点就是 条件中如果删除一个字符串是回文字符串的话那就是回文字符串，
 >
@@ -616,7 +616,7 @@ public static String addBinary(String a,String b){
 
 
 
-## 19. 早餐组合
+## 19. 早餐组合 -> BreakfastCombination
 
 > 小扣在秋日市集选择了一家早餐摊位，一维整型数组 `staple` 中记录了每种主食的价格，一维整型数组 `drinks` 中记录了每种饮料的价格。小扣的计划选择一份主食和一款饮料，且花费不超过 `x` 元。请返回小扣共有多少种购买方案。
 >
@@ -713,5 +713,87 @@ public static int searchBreakFast(int[] drinks, int remain){
     }
     return start;
 }
+```
+
+
+
+## 20. 自制平方根 sqrt函数
+
+> 实现 int sqrt(int x) 函数。
+>
+> 计算并返回 x 的平方根，其中 x 是非负整数。
+>
+> 由于返回类型是整数，结果只保留整数的部分，小数部分将被舍去。
+>
+> 示例 1:
+>
+> 输入: 4
+> 输出: 2
+>
+> 示例 2:
+>
+> 输入: 8
+> 输出: 2
+> 说明: 8 的平方根是 2.82842..., 
+>      由于返回类型是整数，小数部分将被舍去。
+
++ 普通暴力枚举法 (for循环遍历) 时间复杂度： O(n)
+
+```java
+/**
+     * 自制函数求平方根
+     * <p>
+     * 提交
+     * 输入：2147395600
+     * 输出：289398 ×
+     * 应该输出： 46340
+     * <p>
+     * 错误分析： for 循环循环因子i 一开始被声明为int，进行叠乘 / 赋值时超限了，所以输出了289398，改为long后正常输出46340
+     * <p>
+     * 时间复杂度： O(n)
+     */
+    public static int mySqrt(int x) {
+        int res = 0;
+        for (long i = 1; i <= x; i++) {
+            if (i * i <= x) {
+                res = Integer.parseInt(i + "");
+            } else {
+                break;
+            }
+        }
+        return res;
+    }
+```
+
++ 二分查找法 (妙) 时间复杂度 O(logn)
+
+```java
+/**
+     * 使用二分查找法 巧妙解决此题
+     * <p>
+     * 时间复杂度O(logx)
+     *
+     * 注意： 二分查找
+     * ☆ 如果使用int mid = (end - start) / 2;可能会引发死循环问题，
+     * 因为当start 和 end 相差 1的状态下， mid为 0 这样会适中转不出去循环
+     *
+     * 应该替换为 ** int mid = start + (end - start) / 2; **
+     * 如果 start = 2 end = 3 则 mid = 1 这样就规避了 mid = 0 触发的死循环问题
+     */
+    public static int mySqrt1(int x) {
+        int start = 0, end = x, res = 0;
+        while (start <= end) {
+            int mid = start + (end - start) / 2;
+            if ((long) mid * mid <= x) {
+                // 如果中间数平方小于目标数，就进行start指针移位
+                res = mid;
+                start = mid + 1;
+            } else {
+                // 如果中间数平方发育目标数，就进行end指针移位
+                end = mid - 1;
+            }
+        }
+        return res;
+    }
 ```
 
