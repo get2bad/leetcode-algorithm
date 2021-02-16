@@ -12,42 +12,17 @@
 * [12\. 外观数列 \-&gt; CountAndSay](#12-外观数列---countandsay)
 * [13\.最大子序和 \-&gt; MaximumSubarray](#13最大子序和---maximumsubarray)
 * [14\. 最后一个单词的长度](#14-最后一个单词的长度)
-* [<g\-emoji class="g\-emoji" alias="star" fallback\-src="https://github\.githubassets\.com/images/icons/emoji/unicode/2b50\.png">⭐️</g\-emoji>15\.二进制求和 \-&gt;  BinaryAdd <g\-emoji class="g\-emoji" alias="star" fallback\-src="https://github\.githubassets\.com/images/icons/emoji/unicode/2b50\.png">⭐️</g\-emoji>](#️15二进制求和----binaryadd-️)
+* [☆15\.二进制求和 \-&gt;  BinaryAdd ☆](#15二进制求和----binaryadd-)
 * [16\.判断回文字符串(忽略空格 / 标点符号 / 大小写) \-&gt; ValidPalindrome](#16判断回文字符串忽略空格--标点符号--大小写---validpalindrome)
 * [17\.回文字符串2 \-&gt; ValidPalindrome2](#17回文字符串2---validpalindrome2)
 * [18\. 速算机器人 \-&gt; CalculatorMachine](#18-速算机器人---calculatormachine)
 * [19\. 早餐组合 \-&gt; BreakfastCombination](#19-早餐组合---breakfastcombination)
 * [20\. 自制平方根 sqrt函数](#20-自制平方根-sqrt函数)
-* [<g\-emoji class="g\-emoji" alias="star" fallback\-src="https://github\.githubassets\.com/images/icons/emoji/unicode/2b50\.png">⭐️</g\-emoji>21\.爬楼梯问题 \-&gt; ClimbingStairs<g\-emoji class="g\-emoji" alias="star" fallback\-src="https://github\.githubassets\.com/images/icons/emoji/unicode/2b50\.png">⭐️</g\-emoji>](#️21爬楼梯问题---climbingstairs️)
+* [☆21\.爬楼梯问题 \-&gt; ClimbingStairs☆](#21爬楼梯问题---climbingstairs)
 * [22\. 删除排序链表中的重复元素 \-&gt; RemoveDuplicatesLinkedList](#22-删除排序链表中的重复元素---removeduplicateslinkedlist)
-* [<g\-emoji class="g\-emoji" alias="star" fallback\-src="https://github\.githubassets\.com/images/icons/emoji/unicode/2b50\.png">⭐️</g\-emoji>23\.合并两个有序的数组 \-&gt; MergeSortedArray<g\-emoji class="g\-emoji" alias="star" fallback\-src="https://github\.githubassets\.com/images/icons/emoji/unicode/2b50\.png">⭐️</g\-emoji>](#️23合并两个有序的数组---mergesortedarray️)
+* [☆23\.合并两个有序的数组 \-&gt; MergeSortedArray☆](#23合并两个有序的数组---mergesortedarray)
 
 
-
-
-
-* [1\. 判断括号是否有效 \-&gt; ValidParentheses](#1-判断括号是否有效---validparentheses)
-* [2\. 给定数组和目标值，找出数组元素相加等于目标值的索引Index \-&gt; SumTwoNumbers](#2-给定数组和目标值找出数组元素相加等于目标值的索引index---sumtwonumbers)
-* [3\. strStr函数 找出target出现在source的第一个索引 \-&gt; StrStr](#3-strstr函数-找出target出现在source的第一个索引---strstr)
-* [4\. 查找数组中目标值的索引index \-&gt; SearchIndex](#4-查找数组中目标值的索引index---searchindex)
-* [5\. 查找罗马数字 \-&gt; RomaNumber](#5-查找罗马数字---romanumber)
-* [6\. 判断一个数字是否是回文数 \-&gt; ReverseString](#6-判断一个数字是否是回文数---reversestring)
-* [7\. 将数字进行倒过来输出 \-&gt; ReverseNumber](#7-将数字进行倒过来输出---reversenumber)
-* [8\. 移除目标数组与target相同的数字，并且返回操作结束后的数组新长度 \-&gt; RemoveDuplicatesFromSortedArray](#8-移除目标数组与target相同的数字并且返回操作结束后的数组新长度---removeduplicatesfromsortedarray)
-* [9\. 在空间复杂度O(1)下删除target指向的排序好的数组 \-&gt; RemoveElement](#9-在空间复杂度o1下删除target指向的排序好的数组---removeelement)
-* [10\. 字符串数组最长公共前缀 \-&gt; MostLongStrPrefix](#10-字符串数组最长公共前缀---mostlongstrprefix)
-* [11\. 合并两个排序好的链表，合并后的链表也是保持顺序 \-&gt; MergeTwoSortedLists](#11-合并两个排序好的链表合并后的链表也是保持顺序---mergetwosortedlists)
-* [12\. 外观数列 \-&gt; CountAndSay](#12-外观数列---countandsay)
-* [13\.最大子序和 \-&gt; MaximumSubarray](#13最大子序和---maximumsubarray)
-* [14\. 最后一个单词的长度](#14-最后一个单词的长度)
-* [15\.二进制求和 \-&gt; ☆ BinaryAdd ☆](#15二进制求和----binaryadd-)
-* [16\.判断回文字符串(忽略空格 / 标点符号 / 大小写) \-&gt; ValidPalindrome](#16判断回文字符串忽略空格--标点符号--大小写---validpalindrome)
-* [17\.回文字符串2 \-&gt; ValidPalindrome2](#17回文字符串2---validpalindrome2)
-* [18\. 速算机器人 \-&gt; CalculatorMachine](#18-速算机器人---calculatormachine)
-* [19\. 早餐组合 \-&gt; BreakfastCombination](#19-早餐组合---breakfastcombination)
-* [20\. 自制平方根 sqrt函数](#20-自制平方根-sqrt函数)
-* [21\.☆爬楼梯问题 \-&gt; ClimbingStairs☆](#21爬楼梯问题---climbingstairs)
-* [22\. 删除排序链表中的重复元素 \-&gt; RemoveDuplicatesLinkedList](#22-删除排序链表中的重复元素---removeduplicateslinkedlist)
 
 ## 1. 判断括号是否有效 -> ValidParentheses
 
@@ -470,7 +445,7 @@ public String countAndSay(int n) {
 
 
 
-## ⭐️15.二进制求和 ->  BinaryAdd ⭐️
+## ☆15.二进制求和 ->  BinaryAdd ☆
 
 答题思路(枯燥无味的1.最优解决办法 2.思路 3.笨方法)
 
@@ -847,7 +822,7 @@ public static int searchBreakFast(int[] drinks, int remain){
 
 
 
-## ⭐️21.爬楼梯问题 -> ClimbingStairs⭐️
+## ☆21.爬楼梯问题 -> ClimbingStairs☆
 
 > 假设你正在爬楼梯。需要 n 阶你才能到达楼顶。
 >
@@ -987,7 +962,7 @@ public static ListNode deleteDuplicates1(ListNode head) {
 
 
 
-## ⭐️23.合并两个有序的数组 -> MergeSortedArray⭐️
+## ☆23.合并两个有序的数组 -> MergeSortedArray☆
 
 > 给你两个有序整数数组 nums1 和 nums2，请你将 nums2 合并到 nums1 中，使 nums1 成为一个有序数组。
 >
