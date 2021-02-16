@@ -9,17 +9,20 @@
 * [9\. 在空间复杂度O(1)下删除target指向的排序好的数组 \-&gt; RemoveElement](#9-在空间复杂度o1下删除target指向的排序好的数组---removeelement)
 * [10\. 字符串数组最长公共前缀 \-&gt; MostLongStrPrefix](#10-字符串数组最长公共前缀---mostlongstrprefix)
 * [11\. 合并两个排序好的链表，合并后的链表也是保持顺序 \-&gt; MergeTwoSortedLists](#11-合并两个排序好的链表合并后的链表也是保持顺序---mergetwosortedlists)
-* [12. 外观数列 -&gt; CountAndSay](#12-外观数列---countandsay)
+* [12\. 外观数列 \-&gt; CountAndSay](#12-外观数列---countandsay)
 * [13\.最大子序和 \-&gt; MaximumSubarray](#13最大子序和---maximumsubarray)
 * [14\. 最后一个单词的长度](#14-最后一个单词的长度)
-* [15\.二进制求和 \-&gt; ☆ BinaryAdd ☆](#15二进制求和----binaryadd-)
+* [<g\-emoji class="g\-emoji" alias="star" fallback\-src="https://github\.githubassets\.com/images/icons/emoji/unicode/2b50\.png">⭐️</g\-emoji>15\.二进制求和 \-&gt;  BinaryAdd <g\-emoji class="g\-emoji" alias="star" fallback\-src="https://github\.githubassets\.com/images/icons/emoji/unicode/2b50\.png">⭐️</g\-emoji>](#️15二进制求和----binaryadd-️)
 * [16\.判断回文字符串(忽略空格 / 标点符号 / 大小写) \-&gt; ValidPalindrome](#16判断回文字符串忽略空格--标点符号--大小写---validpalindrome)
 * [17\.回文字符串2 \-&gt; ValidPalindrome2](#17回文字符串2---validpalindrome2)
 * [18\. 速算机器人 \-&gt; CalculatorMachine](#18-速算机器人---calculatormachine)
 * [19\. 早餐组合 \-&gt; BreakfastCombination](#19-早餐组合---breakfastcombination)
 * [20\. 自制平方根 sqrt函数](#20-自制平方根-sqrt函数)
-* [21\.☆爬楼梯问题 \-&gt; ClimbingStairs☆](#21爬楼梯问题---climbingstairs)
+* [<g\-emoji class="g\-emoji" alias="star" fallback\-src="https://github\.githubassets\.com/images/icons/emoji/unicode/2b50\.png">⭐️</g\-emoji>21\.爬楼梯问题 \-&gt; ClimbingStairs<g\-emoji class="g\-emoji" alias="star" fallback\-src="https://github\.githubassets\.com/images/icons/emoji/unicode/2b50\.png">⭐️</g\-emoji>](#️21爬楼梯问题---climbingstairs️)
 * [22\. 删除排序链表中的重复元素 \-&gt; RemoveDuplicatesLinkedList](#22-删除排序链表中的重复元素---removeduplicateslinkedlist)
+* [<g\-emoji class="g\-emoji" alias="star" fallback\-src="https://github\.githubassets\.com/images/icons/emoji/unicode/2b50\.png">⭐️</g\-emoji>23\.合并两个有序的数组 \-&gt; MergeSortedArray<g\-emoji class="g\-emoji" alias="star" fallback\-src="https://github\.githubassets\.com/images/icons/emoji/unicode/2b50\.png">⭐️</g\-emoji>](#️23合并两个有序的数组---mergesortedarray️)
+
+
 
 
 
