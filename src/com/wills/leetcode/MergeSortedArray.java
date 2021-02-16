@@ -29,7 +29,7 @@ public class MergeSortedArray {
     public static void main(String[] args) {
         int[] num1 = {1,2,3,4,5,0,0,0,0,0};
         int[] num2 = {2,3,4,5,6};
-        merge2(num1,5,num2,5);
+        merge3(num1,5,num2,5);
 
     }
 
@@ -37,7 +37,8 @@ public class MergeSortedArray {
      * 方法一 : 合并后排序
      * 使用jdk自带的api进行排序
      * 时间复杂度： O((m+n)log(m+n))
-     * 最朴素的解法就是将两个数组合并之后再排序。该算法只需要一行(Java是2行)，时间复杂度较差，为O((n + m)\log(n + m))O((n+m)log(n+m))。这是由于这种方法没有利用两个数组本身已经有序这一点。
+     * 最朴素的解法就是将两个数组合并之后再排序。该算法只需要一行(Java是2行)，时间复杂度较差，为O((n + m)\log(n + m))O((n+m)log(n+m))。
+     * 这是由于这种方法没有利用两个数组本身已经有序这一点。
      */
     public static void merge(int[] nums1, int m, int[] nums2, int n) {
         System.arraycopy(nums2, 0, nums1, m, n);
@@ -87,6 +88,25 @@ public class MergeSortedArray {
             nums1[pointer3--] = (nums1[pointer1] < nums2[pointer2]) ? nums2[pointer2--]: nums1[pointer1--];
         }
         System.arraycopy(nums2, 0, nums1, 0, pointer2 + 1);
+
+        Arrays.stream(nums1).forEach(System.out::print);
+    }
+
+    /**
+     * 对于上一步的极致优化版 (代码读起来更容易)
+     */
+    public static void merge3(int[] nums1, int m, int[] nums2, int n) {
+        // 获取两个数组合并后的最后一个元素的索引
+        int p = m-- + n-- - 1;
+        while (m >= 0 && n >= 0) {
+            // 进行尾部赋值比较
+            nums1[p--] = nums1[m] > nums2[n] ? nums1[m--] : nums2[n--];
+        }
+
+        // 如果 nums2 还没有遍历完，那么就将没有遍历完的直接赋值(充分利用数组有序的原则)
+        while (n >= 0) {
+            nums1[p--] = nums2[n--];
+        }
 
         Arrays.stream(nums1).forEach(System.out::print);
     }

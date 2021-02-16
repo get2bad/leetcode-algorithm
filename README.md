@@ -1055,3 +1055,26 @@ public static void merge2(int[] nums1, int m, int[] nums2, int n) {
 }
 ```
 
++ 双指针法极致优化版
+
+```java
+/**
+ * 对于上一步的极致优化版 (代码读起来更容易)
+ */
+public static void merge3(int[] nums1, int m, int[] nums2, int n) {
+    // 获取两个数组合并后的最后一个元素的索引
+    int p = m-- + n-- - 1;
+    while (m >= 0 && n >= 0) {
+        // 进行尾部赋值比较
+        nums1[p--] = nums1[m] > nums2[n] ? nums1[m--] : nums2[n--];
+    }
+
+    // 如果 nums2 还没有遍历完，那么就将没有遍历完的直接赋值(充分利用数组有序的原则)
+    while (n >= 0) {
+        nums1[p--] = nums2[n--];
+    }
+
+    Arrays.stream(nums1).forEach(System.out::print);
+}
+```
+
