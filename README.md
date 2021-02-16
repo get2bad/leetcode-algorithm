@@ -1,5 +1,27 @@
-# leetcode-algorithm
-[toc]
+* [1\. 判断括号是否有效 \-&gt; ValidParentheses](#1-判断括号是否有效---validparentheses)
+* [2\. 给定数组和目标值，找出数组元素相加等于目标值的索引Index \-&gt; SumTwoNumbers](#2-给定数组和目标值找出数组元素相加等于目标值的索引index---sumtwonumbers)
+* [3\. strStr函数 找出target出现在source的第一个索引 \-&gt; StrStr](#3-strstr函数-找出target出现在source的第一个索引---strstr)
+* [4\. 查找数组中目标值的索引index \-&gt; SearchIndex](#4-查找数组中目标值的索引index---searchindex)
+* [5\. 查找罗马数字 \-&gt; RomaNumber](#5-查找罗马数字---romanumber)
+* [6\. 判断一个数字是否是回文数 \-&gt; ReverseString](#6-判断一个数字是否是回文数---reversestring)
+* [7\. 将数字进行倒过来输出 \-&gt; ReverseNumber](#7-将数字进行倒过来输出---reversenumber)
+* [8\. 移除目标数组与target相同的数字，并且返回操作结束后的数组新长度 \-&gt; RemoveDuplicatesFromSortedArray](#8-移除目标数组与target相同的数字并且返回操作结束后的数组新长度---removeduplicatesfromsortedarray)
+* [9\. 在空间复杂度O(1)下删除target指向的排序好的数组 \-&gt; RemoveElement](#9-在空间复杂度o1下删除target指向的排序好的数组---removeelement)
+* [10\. 字符串数组最长公共前缀 \-&gt; MostLongStrPrefix](#10-字符串数组最长公共前缀---mostlongstrprefix)
+* [11\. 合并两个排序好的链表，合并后的链表也是保持顺序 \-&gt; MergeTwoSortedLists](#11-合并两个排序好的链表合并后的链表也是保持顺序---mergetwosortedlists)
+* [12. 外观数列 -&gt; CountAndSay](#12-外观数列---countandsay)
+* [13\.最大子序和 \-&gt; MaximumSubarray](#13最大子序和---maximumsubarray)
+* [14\. 最后一个单词的长度](#14-最后一个单词的长度)
+* [15\.二进制求和 \-&gt; ☆ BinaryAdd ☆](#15二进制求和----binaryadd-)
+* [16\.判断回文字符串(忽略空格 / 标点符号 / 大小写) \-&gt; ValidPalindrome](#16判断回文字符串忽略空格--标点符号--大小写---validpalindrome)
+* [17\.回文字符串2 \-&gt; ValidPalindrome2](#17回文字符串2---validpalindrome2)
+* [18\. 速算机器人 \-&gt; CalculatorMachine](#18-速算机器人---calculatormachine)
+* [19\. 早餐组合 \-&gt; BreakfastCombination](#19-早餐组合---breakfastcombination)
+* [20\. 自制平方根 sqrt函数](#20-自制平方根-sqrt函数)
+* [21\.☆爬楼梯问题 \-&gt; ClimbingStairs☆](#21爬楼梯问题---climbingstairs)
+* [22\. 删除排序链表中的重复元素 \-&gt; RemoveDuplicatesLinkedList](#22-删除排序链表中的重复元素---removeduplicateslinkedlist)
+
+
 
 ## 1. 判断括号是否有效 -> ValidParentheses
 
@@ -422,7 +444,7 @@ public String countAndSay(int n) {
 
 
 
-## 15.二进制求和 -> ☆ BinaryAdd ☆
+## ⭐️15.二进制求和 ->  BinaryAdd ⭐️
 
 答题思路(枯燥无味的1.最优解决办法 2.思路 3.笨方法)
 
@@ -799,7 +821,7 @@ public static int searchBreakFast(int[] drinks, int remain){
 
 
 
-## 21.☆爬楼梯问题 -> ClimbingStairs☆
+## ⭐️21.爬楼梯问题 -> ClimbingStairs⭐️
 
 > 假设你正在爬楼梯。需要 n 阶你才能到达楼顶。
 >
@@ -812,6 +834,7 @@ public static int searchBreakFast(int[] drinks, int remain){
 > 输入： 2
 > 输出： 2
 > 解释： 有两种方法可以爬到楼顶。
+>
 > 1.  1 阶 + 1 阶
 > 2.  2 阶
 > 示例 2：
@@ -933,6 +956,101 @@ public static ListNode deleteDuplicates1(ListNode head) {
         }
     }
     return head;
+}
+```
+
+
+
+## ⭐️23.合并两个有序的数组 -> MergeSortedArray⭐️
+
+> 给你两个有序整数数组 nums1 和 nums2，请你将 nums2 合并到 nums1 中，使 nums1 成为一个有序数组。
+>
+> 初始化 nums1 和 nums2 的元素数量分别为 m 和 n 。你可以假设 nums1 的空间大小等于 m + n，这样它就有足够的空间保存来自 nums2 的元素。
+>
+>  
+>
+> 示例 1：
+>
+> 输入：nums1 = [1,2,3,0,0,0], m = 3, nums2 = [2,5,6], n = 3
+> 输出：[1,2,2,3,5,6]
+> 示例 2：
+>
+> 输入：nums1 = [1], m = 1, nums2 = [], n = 0
+> 输出：[1]
+
+刚开始做本题的时候，直接没有思路，唯一的思路是用双指针法进行求解，但是写了一通实在是做不出来，遂看了答案，这才恍然大悟，原来可以这么做，下面看看官方的三种答案：
+
++ JDK自带API
+
+```java
+/**
+     * 方法一 : 合并后排序
+     * 使用jdk自带的api进行排序
+     * 时间复杂度： O((m+n)log(m+n))
+     * 最朴素的解法就是将两个数组合并之后再排序。该算法只需要一行(Java是2行)，时间复杂度较差，为O((n + m)\log(n + m))O((n+m)log(n+m))。这是由于这种方法没有利用两个数组本身已经有序这一点。
+ */
+public static void merge(int[] nums1, int m, int[] nums2, int n) {
+    System.arraycopy(nums2, 0, nums1, m, n);
+    Arrays.sort(nums1);
+    Arrays.stream(nums1).forEach(System.out::println);
+}
+```
+
+
+
++ 双指针 + 临时数组
+
+```java
+/**
+ * 方法二： 双指针法
+ * 1.声明一个临时的数组tmp，指向有数据的nums1
+ * 2.将nums1有数据的复制到这个临时数组tmp
+ * 3.声明三个指针，分别指向 nums1 nums2 tmp
+ * 4.进行循环判断 如果小于就进行相关赋值
+ * 5.如果最后遍历的元素还没有全部赋值完毕要做最后的补充
+ * 时间复杂度： O(m+n)
+ * 空间复杂度： O(m)
+ */
+public static void merge1(int[] nums1, int m, int[] nums2, int n) {
+    int[] tmp = new int[m];
+    System.arraycopy(nums1,0,tmp,0,m);
+
+    int pointer1 = 0,pointer2 = 0, pointer3 = 0;
+
+    while((pointer1 < m)&&(pointer2 < n)){
+        nums1[pointer3++] = (tmp[pointer1] < nums2[pointer2]) ? tmp[pointer1++] : nums2[pointer2++];
+    }
+
+    if(pointer1 < m){
+        System.arraycopy(tmp, pointer1, nums1, pointer1 + pointer2, m + n - pointer1 - pointer2);
+    }
+    if(pointer2 < n){
+        System.arraycopy(nums2, pointer2, nums1, pointer1 + pointer2, m + n - pointer1 - pointer2);
+    }
+    Arrays.stream(nums1).forEach(System.out::print);
+}
+```
+
+
+
++ 双指针
+
+```java
+/**
+ * merge1的简化版，将空间复杂度进一步优化
+ * 时间复杂度O(m+n)
+ * 空间复杂度O(1)
+ */
+public static void merge2(int[] nums1, int m, int[] nums2, int n) {
+
+    int pointer1 = m - 1, pointer2 = n - 1, pointer3 = m + n -1;
+
+    while((pointer1 >= 0)&&(pointer2 >= 0)){
+        nums1[pointer3--] = (nums1[pointer1] < nums2[pointer2]) ? nums2[pointer2--]: nums1[pointer1--];
+    }
+    System.arraycopy(nums2, 0, nums1, 0, pointer2 + 1);
+
+    Arrays.stream(nums1).forEach(System.out::print);
 }
 ```
 
