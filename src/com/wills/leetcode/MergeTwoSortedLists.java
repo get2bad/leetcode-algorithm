@@ -1,33 +1,13 @@
 package com.wills.leetcode;
 
+import com.wills.leetcode.common.ListNode;
+
 /**
  * @author 王帅
  * @date 2021-02-03 09:33:12
  * @description:
  *
  */
-class ListNode {
-    int val;
-    ListNode next;
-
-    ListNode(int val) {
-        this.val = val;
-    }
-
-    ListNode(int val, ListNode next) {
-        this.val = val;
-        this.next = next;
-    }
-
-    @Override
-    public String toString() {
-        return "ListNode{" +
-                "val=" + val +
-                ", next=" + next +
-                '}';
-    }
-}
-
 public class MergeTwoSortedLists {
 
     public static void main(String[] args) {

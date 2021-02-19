@@ -1,5 +1,7 @@
 package com.wills.leetcode;
 
+import com.wills.leetcode.common.ListNode;
+
 /**
  * 删除排序链表中的重复元素
  *
