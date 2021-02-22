@@ -335,28 +335,6 @@ public static String longestCommonPrefix(String[] strs) {
 稍微动一些脑筋题，不过也是简单题
 
 ```java
-class ListNode {
-    int val;
-    ListNode next;
-
-    ListNode(int val) {
-        this.val = val;
-    }
-
-    ListNode(int val, ListNode next) {
-        this.val = val;
-        this.next = next;
-    }
-
-    @Override
-    public String toString() {
-        return "ListNode{" +
-                "val=" + val +
-                ", next=" + next +
-                '}';
-    }
-}
-
 public class MergeTwoSortedLists {
 
     public static void main(String[] args) {
@@ -448,7 +426,8 @@ public String countAndSay(int n) {
      * 找出 最大值进行返回
      * 5. 返回结果 res
      * 时间复杂度 O(n)
-     * 如果不懂，请看官方的解题思路： <a href="https://leetcode-cn.com/problems/maximum-subarray/solution/zui-da-zi-xu-he-by-leetcode-solution/">最大子序和</a>
+     * 如果不懂，请看官方的解题思路： 
+     * <a href="https://leetcode-cn.com/problems/maximum-subarray/solution/zui-da-zi-xu-he-by-leetcode-solution/">最大子序和</a>
      *
      * @param nums
      * @return
