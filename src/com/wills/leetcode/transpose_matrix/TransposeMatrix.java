@@ -55,7 +55,7 @@ public class TransposeMatrix {
         if(matrix == null || matrix.length == 0) return matrix;
         int length = matrix.length;
         int width = matrix[0].length;
-        int[][] res = new int[length][width];
+        int[][] res = new int[width][length];
         for (int i = 0; i < length; i++) {
             for (int j = 0; j < width; j++) {
                 res[j][i] = matrix[i][j];
