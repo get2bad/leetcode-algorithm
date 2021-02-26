@@ -1,10 +1,15 @@
 package com.wills.leetcode.common;
 
+import lombok.Builder;
+import lombok.Data;
+
 /**
  * @author 王帅
  * @date 2021-02-19 09:42:55
  * @description:
  */
+@Data
+@Builder
 public class TreeNode {
 
     public int val;
@@ -21,14 +26,5 @@ public class TreeNode {
         this.val = val;
         this.left = left;
         this.right = right;
-    }
-
-    @Override
-    public String toString() {
-        return "TreeNode{" +
-                "val=" + val +
-                ", left=" + left +
-                ", right=" + right +
-                '}';
     }
 }
