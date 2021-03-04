@@ -4,7 +4,7 @@ package com.wills.leetcode.buy_sell_stock;
  * @author 王帅
  * @date 2021-03-03 10:27:18
  * @description:
- * 最佳实践买卖股票
+ * 最佳实践买卖股票1
  */
 public class BuyAndSellStock1 {
 
