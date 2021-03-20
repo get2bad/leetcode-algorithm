@@ -10,7 +10,6 @@ import java.util.Map;
  * @date 2021-03-19 14:53:03
  * @description:
  */
-@Slf4j
 public class ParkingSystem {
 
     /**
