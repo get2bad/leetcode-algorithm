@@ -1,4 +1,4 @@
-package com.wills.leetcode.degreeofanarray;
+package com.wills.leetcode.degree_of_an_array;
 
 import java.util.HashMap;
 import java.util.Map;

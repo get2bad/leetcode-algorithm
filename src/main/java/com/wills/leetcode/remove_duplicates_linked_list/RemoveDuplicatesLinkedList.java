@@ -1,4 +1,4 @@
-package com.wills.leetcode.remove_duplicateslinkedlist;
+package com.wills.leetcode.remove_duplicates_linked_list;
 
 import com.wills.leetcode.common.ListNode;
 

@@ -1,4 +1,4 @@
-package com.wills.leetcode.remove_duplicatesarray;
+package com.wills.leetcode.remove_duplicates_array;
 
 import java.util.Arrays;
 import java.util.HashSet;
