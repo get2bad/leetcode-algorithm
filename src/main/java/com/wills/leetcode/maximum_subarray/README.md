@@ -17,9 +17,6 @@
      * 时间复杂度 O(n)
      * 如果不懂，请看官方的解题思路：
      * <a href="https://leetcode-cn.com/problems/maximum-subarray/solution/zui-da-zi-xu-he-by-leetcode-solution/">最大子序和</a>
-     *
-     * @param nums
-     * @return
      */
     public static int maxSubArray(int[] nums) {
         if (nums.length == 1) return nums[0];

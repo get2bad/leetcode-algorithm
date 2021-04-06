@@ -43,10 +43,8 @@ public class MaximumSubarray {
      * 找出 最大值进行返回
      * 5. 返回结果 res
      * 时间复杂度 O(n)
-     * 如果不懂，请看官方的解题思路： <a href="https://leetcode-cn.com/problems/maximum-subarray/solution/zui-da-zi-xu-he-by-leetcode-solution/">最大子序和</a>
-     *
-     * @param nums
-     * @return
+     * 如果不懂，请看官方的解题思路：
+     * <a href="https://leetcode-cn.com/problems/maximum-subarray/solution/zui-da-zi-xu-he-by-leetcode-solution/">最大子序和</a>
      */
     public static int maxSubArray(int[] nums) {
         if (nums.length == 1) return nums[0];
@@ -65,9 +63,6 @@ public class MaximumSubarray {
      * 2.说起for循环，那么我们可以使用类似于冒泡算法，来计算叠加计算每一项的值，叠加后如果比前一个数字大，就将返回的res重新赋值
      * 3.直到遍历完一个完整的数组位置
      * 时间复杂度为 O(n^2)
-     *
-     * @param nums 放入的数组
-     * @return 最大整数和
      */
     public static int maxSubArray1(int[] nums) {
         if (nums.length == 1) return nums[0];
