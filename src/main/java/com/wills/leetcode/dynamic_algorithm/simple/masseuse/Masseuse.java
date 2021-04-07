@@ -1,4 +1,4 @@
-package com.wills.leetcode.dynamic_algorithm.masseuse;
+package com.wills.leetcode.dynamic_algorithm.simple.masseuse;
 
 /**
  * @author 王帅
