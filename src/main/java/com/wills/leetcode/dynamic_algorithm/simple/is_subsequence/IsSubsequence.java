@@ -15,6 +15,7 @@ public class IsSubsequence {
     }
 
     public static boolean isSubsequence2(String s, String t) {
+        if(s.length()==0) return true;
         int n = s.length(), m = t.length();
 
         boolean[][] res = new boolean[n][m + 1];
