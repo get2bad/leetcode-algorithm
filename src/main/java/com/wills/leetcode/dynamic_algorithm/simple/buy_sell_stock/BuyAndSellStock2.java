@@ -1,4 +1,4 @@
-package com.wills.leetcode.buy_sell_stock;
+package com.wills.leetcode.dynamic_algorithm.simple.buy_sell_stock;
 
 /**
  * @author 王帅
@@ -18,7 +18,6 @@ public class BuyAndSellStock2 {
      * 输出: 7
      * 解释:
      * 在第 2 天（股票价格 = 1）的时候买入，在第 3 天（股票价格 = 5）的时候卖出, 这笔交易所能获得利润 = 5-1 = 4 。
-     *
      * 随后，在第 4 天（股票价格 = 3）的时候买入，在第 5 天（股票价格 = 6）的时候卖出, 这笔交易所能获得利润 = 6-3 = 3 。
      *
      * 示例 2:
@@ -35,7 +34,7 @@ public class BuyAndSellStock2 {
      * 解释: 在这种情况下, 没有交易完成, 所以最大利润为 0。
      */
     public static void main(String[] args) {
-        int[] source = {7,6,4,3,1};
+        int[] source = {1,2,3,4,5};
         System.out.println(maxProfit(source));
     }
 
@@ -53,11 +52,8 @@ public class BuyAndSellStock2 {
      * 但是如果买进后一天的后一天价格比买进一天的后一天价格还低那么就是 买进一天的后两天卖，一次类推
      */
     public static int maxProfit(int[] prices) {
-        if(prices == null || prices.length < 2) return 0;
-
         // 赋初始值
         int sum = 0;
-
         for (int i = 1; i < prices.length; i++) {
             int curr = prices[i];
             int pre = prices[i - 1];
@@ -65,8 +61,4 @@ public class BuyAndSellStock2 {
         }
         return sum;
     }
-
-
-
-
 }

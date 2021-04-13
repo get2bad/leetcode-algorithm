@@ -1,4 +1,4 @@
-package com.wills.leetcode.buy_sell_stock;
+package com.wills.leetcode.dynamic_algorithm.simple.buy_sell_stock;
 
 /**
  * @author 王帅
@@ -31,7 +31,7 @@ public class BuyAndSellStock1 {
 
     /**
      * 思路：
-     * 典型的动态规划问题
+     * 暴力枚举方法
      * 计算公式： 前i天的最大收益 = max{前i-1天的最大收益，第i天的价格-前i-1天中的最小价格}
      *
      * 时间复杂度: O(n^2)
@@ -55,11 +55,11 @@ public class BuyAndSellStock1 {
      * 时间复杂度: O(n)
      */
     public static int maxProfit1(int[] prices) {
-        int res = 0, minPrice = Integer.MAX_VALUE;
+        int res=0,minPrice=Integer.MAX_VALUE;
         for (int i = 0; i < prices.length; i++) {
-            if(prices[i] < minPrice){
+            if(minPrice > prices[i]){
                 minPrice = prices[i];
-            } else if(prices[i] - minPrice > res){
+            } else if (prices[i] - minPrice > res){
                 res = prices[i] - minPrice;
             }
         }
