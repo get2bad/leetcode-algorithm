@@ -33,7 +33,6 @@ public class MaxReverseStr {
                         maxLen = r - l + 1;
                         maxStart = l;
                         maxEnd = r;
-
                     }
                 }
             }
