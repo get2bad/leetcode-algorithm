@@ -1,4 +1,4 @@
-package com.wills.leetcode.dynamic_algorithm.climbing_stairs;
+package com.wills.leetcode.dynamic_algorithm.simple.climbing_stairs;
 
 /**
  * 爬楼梯问题

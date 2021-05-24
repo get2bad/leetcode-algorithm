@@ -1,4 +1,4 @@
-package com.wills.leetcode.dynamic_algorithm.uncrossed_line;
+package com.wills.leetcode.dynamic_algorithm.middle.uncrossed_line;
 
 public class UncrossedLines {
 

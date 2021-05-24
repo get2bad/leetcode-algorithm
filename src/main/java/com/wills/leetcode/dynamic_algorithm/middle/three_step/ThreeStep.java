@@ -1,4 +1,4 @@
-package com.wills.leetcode.dynamic_algorithm.three_step;
+package com.wills.leetcode.dynamic_algorithm.middle.three_step;
 
 public class ThreeStep {
 
