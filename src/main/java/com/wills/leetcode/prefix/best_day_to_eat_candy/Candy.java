@@ -10,7 +10,7 @@ package com.wills.leetcode.prefix.best_day_to_eat_candy;
  */
 public class Candy {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception{
         int[] candiesCount = {7,4,5,3,8};
         int[][] queries = {{0,2,2},{4,2,4},{2,13,1000000000}};
         for (boolean b : canEat(candiesCount, queries)) {
