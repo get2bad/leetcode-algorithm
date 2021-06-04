@@ -1,4 +1,4 @@
-package com.wills.leetcode.waiting_to_be_sorted.linked_list.intersection_of_two_linked_lists;
+package com.wills.leetcode.linked_list.intersection_of_two_linked_lists;
 
 import com.wills.leetcode.common.ListNode;
 

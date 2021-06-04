@@ -1,4 +1,4 @@
-package com.wills.leetcode.waiting_to_be_sorted.linked_list.linked_list_cycle;
+package com.wills.leetcode.linked_list.linked_list_cycle;
 
 import com.wills.leetcode.common.ListNode;
 
