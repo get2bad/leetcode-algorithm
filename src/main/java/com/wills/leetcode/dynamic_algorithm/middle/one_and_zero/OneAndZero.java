@@ -1,9 +1,4 @@
-package com.wills.leetcode.dynamic_algorithm.one_and_zero;
-
-import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Map;
+package com.wills.leetcode.dynamic_algorithm.middle.one_and_zero;
 
 /**
  * @author 王帅
