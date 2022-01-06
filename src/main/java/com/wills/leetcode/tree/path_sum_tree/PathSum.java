@@ -1,6 +1,5 @@
 package com.wills.leetcode.tree.path_sum_tree;
 
-import com.sun.source.tree.Tree;
 import com.wills.leetcode.common.TreeNode;
 
 import java.util.LinkedList;
