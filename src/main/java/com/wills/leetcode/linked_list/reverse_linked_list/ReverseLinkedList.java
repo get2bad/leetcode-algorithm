@@ -22,8 +22,8 @@ public class ReverseLinkedList {
      *
      * 输入：head = [1,2,3,4,5], left = 2, right = 4
      * 输出：[1,4,3,2,5]
-     * 示例 2：
      *
+     * 示例 2：
      * 输入：head = [5], left = 1, right = 1
      * 输出：[5]
      */
