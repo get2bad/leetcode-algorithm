@@ -1,19 +1,16 @@
 package com.wills.leetcode.other.middle.stock_price_fluctuation;
 
-import com.sun.javafx.collections.SortableList;
-import javafx.collections.transformation.SortedList;
-
 import java.util.*;
 
 public class StockPriceFluctuation {
 
     public static void main(String[] args) {
         StockPrice price = new StockPrice();
-        price.update(( int)new Date().getTime(),3);
-        price.update(( int)new Date().getTime(),4);
-        price.update(( int)new Date().getTime(),5);
+        price.update((int)System.currentTimeMillis(),3);
+        price.update(( int)System.currentTimeMillis(),4);
+        price.update(( int)System.currentTimeMillis(),5);
         System.out.println(price.maximum());
-        price.update(( int)new Date().getTime(),3);
+        price.update(( int)System.currentTimeMillis(),3);
         System.out.println(price.minimum());
         System.out.println(price.current());
 
