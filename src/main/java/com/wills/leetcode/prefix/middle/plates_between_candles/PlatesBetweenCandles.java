@@ -1,9 +1,7 @@
-package com.wills.leetcode.other.middle.plates_between_candles;
+package com.wills.leetcode.prefix.middle.plates_between_candles;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 /**
  * @ClassName PlatesBetweenCandles
