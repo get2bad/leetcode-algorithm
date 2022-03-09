@@ -1,4 +1,4 @@
-package com.wills.leetcode.other.easy.count_Say;
+package com.wills.leetcode.other.easy.count_say;
 
 /**
  * 给定一个正整数 n ，输出外观数列的第 n 项。
