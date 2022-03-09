@@ -168,6 +168,39 @@ public static int[] platesBetweenCandles1(String s, int[][] queries) {
 
 
 
+## 前缀和
+
+上面的升级版，直接进行预处理，具体步骤看注释
+
+```java
+// 前缀和
+public static int[] platesBetweenCandles2(String s, int[][] qs) {
+    char[] cs = s.toCharArray();
+    int n = cs.length, m = qs.length;
+    int[] leftCandy = new int[n], rightCandy = new int[n];
+    int[] sum = new int[n + 1];
+    for (int i = 0, j = n - 1, p = -1, q = -1; i < n; i++, j--) {
+        if (cs[i] == '|') p = i;
+        if (cs[j] == '|') q = j;
+        // 如果遇到了蜡烛会将索引赋值到对应的槽中，否则就是 -1
+        leftCandy[i] = p; rightCandy[j] = q;
+        // 进行前缀和的操作
+        sum[i + 1] = sum[i] + (cs[i] == '*' ? 1 : 0);
+    }
+    int[] ans = new int[m];
+    for (int i = 0; i < m; i++) {
+        // 拿到需要查找的 开始 结束 边界
+        int start = qs[i][0], end = qs[i][1];
+        // 拿到开始结束的索引
+        int startCandyIndex = rightCandy[start], endCandyIndex = leftCandy[end];
+        if (startCandyIndex != -1 && startCandyIndex <= endCandyIndex)
+            // 求出差值
+            ans[i] = sum[endCandyIndex + 1] - sum[startCandyIndex];
+    }
+    return ans;
+}
+```
+
 
 
  
