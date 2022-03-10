@@ -200,7 +200,3 @@ public static int[] platesBetweenCandles2(String s, int[][] qs) {
     return ans;
 }
 ```
-
-
-
- 
