@@ -75,6 +75,6 @@ public class TreeStr {
                 endSet.add(lastAddtion);
             }
         }
-        return sb.substring(1,sb.length());
+        return sb.substring(1,sb.length() -1);
     }
 }
