@@ -78,3 +78,5 @@ fabric.properties
 !/.idea/libraries/
 !/.idea/
 !/.idea/workspace.xml
+!/.idea/
+!/.idea/git_toolbox_prj.xml
