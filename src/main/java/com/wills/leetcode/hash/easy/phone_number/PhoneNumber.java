@@ -18,7 +18,7 @@ public class PhoneNumber {
     public static void main(String[] args) {
         PhoneNumber obj = new PhoneNumber();
         List<String> res = obj.letterCombinations("23");
-        System.out.println(String.valueOf(res));
+        System.out.println(res);
     }
 
     /**
