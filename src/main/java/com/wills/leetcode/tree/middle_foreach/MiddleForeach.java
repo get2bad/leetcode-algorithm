@@ -13,16 +13,18 @@ import java.util.List;
  * @Author 王帅
  * @Version 1.0
  * @Description 二叉树的中序遍历
+ *
+ * https://leetcode-cn.com/problems/binary-tree-inorder-traversal/
  */
 public class MiddleForeach {
 
     public static void main(String[] args) {
         TreeNode t1 = new TreeNode(1, new TreeNode(2, new TreeNode(3, null, null), new TreeNode(3, null, null)), new TreeNode(5, null, null));
-        System.out.println(new MiddleForeach().inorderTraversal1(t1));
+        System.out.println(new MiddleForeach().inorderTraversalByMorris(t1));
     }
 
     public List<Integer> inorderTraversalByMorris(TreeNode root) {
-        List<Integer> res = new ArrayList<Integer>();
+        List<Integer> res = new ArrayList<>();
         TreeNode predecessor = null;
 
         while (root != null) {
