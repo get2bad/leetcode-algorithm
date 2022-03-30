@@ -11,4 +11,5 @@
 
 ../../.idea
 
-../../.idea/codeStyles
+../../.idea/codeStyles!/git_toolbox_prj.xml
+!/git_toolbox_prj.xml
