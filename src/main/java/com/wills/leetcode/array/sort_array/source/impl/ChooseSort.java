@@ -1,4 +1,6 @@
-package com.wills.leetcode.array.sort_array;
+package com.wills.leetcode.array.sort_array.source.impl;
+
+import com.wills.leetcode.array.sort_array.source.Sort;
 
 /**
  * @ClassName ChooseSort
@@ -7,10 +9,11 @@ package com.wills.leetcode.array.sort_array;
  * @Version 1.0
  * @Description
  */
-public class ChooseSort {
+public class ChooseSort implements Sort {
 
     // 选择排序：每一轮选择最小元素交换到未排定部分的开头（类似于 冒泡排序 时间复杂度 n^2）
-    public int[] sortArrayByChoose(int[] nums) {
+    @Override
+    public int[] sort(int[] nums) {
         int len = nums.length;
         // 循环不变量：[0, i) 有序，且该区间里所有元素就是最终排定的样子
         for (int i = 0; i < len - 1; i++) {

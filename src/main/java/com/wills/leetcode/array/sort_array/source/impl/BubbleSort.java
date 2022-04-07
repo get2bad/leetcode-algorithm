@@ -1,4 +1,6 @@
-package com.wills.leetcode.array.sort_array;
+package com.wills.leetcode.array.sort_array.source.impl;
+
+import com.wills.leetcode.array.sort_array.source.Sort;
 
 /**
  * @ClassName BubbleSort
@@ -7,11 +9,12 @@ package com.wills.leetcode.array.sort_array;
  * @Version 1.0
  * @Description
  */
-public class BubbleSort {
+public class BubbleSort implements Sort {
 
 
     // 暴力法 冒泡排序 (超时)
-    public int[] sortArrayByBubble(int[] nums) {
+    @Override
+    public int[] sort(int[] nums) {
         int len = nums.length;
         for (int i = 0; i < len; i++) {
             for (int j = i + 1; j < len; j++) {

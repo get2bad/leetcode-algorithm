@@ -1,4 +1,6 @@
-package com.wills.leetcode.array.sort_array;
+package com.wills.leetcode.array.sort_array.source.impl;
+
+import com.wills.leetcode.array.sort_array.source.Sort;
 
 /**
  * @ClassName HeapSort
@@ -7,9 +9,10 @@ package com.wills.leetcode.array.sort_array;
  * @Version 1.0
  * @Description
  */
-public class HeapSort {
+public class HeapSort implements Sort {
 
-    public int[] sortArrayByHeap(int[] nums) {
+    @Override
+    public int[] sort(int[] nums) {
         int len = nums.length;
         // 将数组整理成堆
         heapify(nums);

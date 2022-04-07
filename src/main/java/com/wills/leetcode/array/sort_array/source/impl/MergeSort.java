@@ -1,4 +1,6 @@
-package com.wills.leetcode.array.sort_array;
+package com.wills.leetcode.array.sort_array.source.impl;
+
+import com.wills.leetcode.array.sort_array.source.Sort;
 
 /**
  * @ClassName MergeSort
@@ -7,10 +9,11 @@ package com.wills.leetcode.array.sort_array;
  * @Version 1.0
  * @Description
  */
-public class MergeSort {
+public class MergeSort implements Sort {
 
     // 归并排序
-    public int[] sortArrayByMergeSort(int[] nums) {
+    @Override
+    public int[] sort(int[] nums) {
         int len = nums.length;
         int[] temp = new int[len];
         mergeSort(nums, 0, len - 1, temp);

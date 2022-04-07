@@ -1,4 +1,6 @@
-package com.wills.leetcode.array.sort_array;
+package com.wills.leetcode.array.sort_array.source.impl;
+
+import com.wills.leetcode.array.sort_array.source.Sort;
 
 /**
  * @ClassName BinSort
@@ -7,14 +9,15 @@ package com.wills.leetcode.array.sort_array;
  * @Version 1.0
  * @Description
  */
-public class BinSort {
+public class BinSort implements Sort {
 
     // 桶排序
     // 1 <= A.length <= 10000
     // -50000 <= A[i] <= 50000
     // 10_0000
     private static final int OFFSET = 50000;
-    public int[] sortArrayByBin(int[] nums) {
+    @Override
+    public int[] sort(int[] nums) {
         int len = nums.length;
         // 第 1 步：将数据转换为 [0, 10_0000] 区间里的数
         for (int i = 0; i < len; i++) {

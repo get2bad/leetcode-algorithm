@@ -1,4 +1,6 @@
-package com.wills.leetcode.array.sort_array;
+package com.wills.leetcode.array.sort_array.source.impl;
+
+import com.wills.leetcode.array.sort_array.source.Sort;
 
 import java.util.Random;
 
@@ -9,12 +11,13 @@ import java.util.Random;
  * @Version 1.0
  * @Description
  */
-public class QuickSort {
+public class QuickSort implements Sort {
 
     // 列表大小等于或小于该大小，将优先于 mergeSort 使用插入排序
     private static final int INSERTION_SORT_THRESHOLD = 7;
     // 快速排序
-    public int[] sortArrayByFast(int[] nums) {
+    @Override
+    public int[] sort(int[] nums) {
         int len = nums.length;
         quickSort(nums, 0, len - 1);
         return nums;
