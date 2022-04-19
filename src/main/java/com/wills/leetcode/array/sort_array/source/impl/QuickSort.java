@@ -12,6 +12,8 @@ import java.util.Random;
  * @Author 王帅
  * @Version 1.0
  * @Description
+ * 助记动图：
+ * https://www.runoob.com/wp-content/uploads/2019/03/quickSort.gif
  */
 public class QuickSort implements Sort {
 
@@ -61,6 +63,7 @@ public class QuickSort implements Sort {
             System.out.println(Arrays.toString(array));
         }
         // 将中心元素和指针指向的元素交换位置
+        // 将基准值放到中间，用来区分 左边是比基准值小的，右边是比基准值大的
         int temp = array[pointer];
         array[pointer] = array[right];
         array[right] = temp;
