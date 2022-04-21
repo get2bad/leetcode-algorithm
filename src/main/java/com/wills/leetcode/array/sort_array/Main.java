@@ -1,10 +1,7 @@
 package com.wills.leetcode.array.sort_array;
 
 import com.wills.leetcode.array.sort_array.source.Sort;
-import com.wills.leetcode.array.sort_array.source.impl.BubbleSort;
-import com.wills.leetcode.array.sort_array.source.impl.InsertionSort;
-import com.wills.leetcode.array.sort_array.source.impl.MergeSort;
-import com.wills.leetcode.array.sort_array.source.impl.QuickSort;
+import com.wills.leetcode.array.sort_array.source.impl.*;
 import org.junit.Test;
 
 import java.util.Arrays;
@@ -25,7 +22,7 @@ public class Main {
         System.out.println("===============================bubbleSort===============================");
         obj = new BubbleSort();
         int[] res = obj.sort(source);
-        Arrays.stream(res).forEach(System.out::println);
+        System.out.println(Arrays.toString(res));
     }
 
     @Test
@@ -33,7 +30,7 @@ public class Main {
         System.out.println("=============================insertionSort=================================");
         obj = new InsertionSort();
         int[] res = obj.sort(source);
-        Arrays.stream(res).forEach(System.out::println);
+        System.out.println(Arrays.toString(res));
     }
 
     @Test
@@ -49,7 +46,7 @@ public class Main {
             }
             nums[j] = tmp;
         }
-        Arrays.stream(nums).forEach(System.out::println);
+        System.out.println(Arrays.toString(nums));
     }
 
     @Test
@@ -57,7 +54,7 @@ public class Main {
         System.out.println("=============================mergeSort=================================");
         obj = new MergeSort();
         int[] res = obj.sort(source);
-        Arrays.stream(res).forEach(System.out::println);
+        System.out.println(Arrays.toString(res));
     }
 
     @Test
@@ -65,6 +62,14 @@ public class Main {
         System.out.println("=============================quickSort=================================");
         obj = new QuickSort();
         int[] res = obj.sort(source);
-        Arrays.stream(res).forEach(System.out::println);
+        System.out.println(Arrays.toString(res));
+    }
+
+    @Test
+    public void heapSort(){
+        System.out.println("=============================heapSort=================================");
+        obj = new HeapSort();
+        int[] res = obj.sort(source);
+        System.out.println(Arrays.toString(res));
     }
 }
