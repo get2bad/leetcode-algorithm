@@ -74,6 +74,7 @@ public class SumOfNum {
             dfs(candidates, i, len, target - candidates[i], path, res);
 
             // 状态重置
+            // 为什么要 removeLast? 因为要回溯之前一个的下一个结果
             path.removeLast();
         }
     }
