@@ -16,14 +16,14 @@ import java.util.List;
  */
 public class FourNumSum {
 
-//    int[] source = new int[]{1, 0, -1, 0, -2, 2};
-//    int target = 0;
+    int[] source = new int[]{1, 0, -1, 0, -2, 2};
+    int target = 0;
 
 //    int[] source = new int[]{2, 2, 2, 2, 2};
 //    int target = 8;
 
-    int[] source = new int[]{1000000000, 1000000000, 1000000000, 1000000000};
-    int target = -294967296;
+//    int[] source = new int[]{1000000000, 1000000000, 1000000000, 1000000000};
+//    int target = -294967296;
 
     @Test
     public void test() {
