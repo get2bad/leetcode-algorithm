@@ -2,11 +2,6 @@ package com.wills.leetcode.array.jump_game;
 
 import org.junit.Test;
 
-import java.util.ArrayDeque;
-import java.util.ArrayList;
-import java.util.Deque;
-import java.util.List;
-
 /**
  * @ClassName JumpGame
  * @Date 2022/6/24 14:26
