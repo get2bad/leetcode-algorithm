@@ -8,26 +8,30 @@ import java.util.Comparator;
 import java.util.List;
 
 /**
- * @ClassName MergeIntervals
- * @Date 2022/6/29 14:52
+ * @ClassName InsertInterval
+ * @Date 2022/6/29 16:24
  * @Author 王帅
  * @Version 1.0
  * @Description
  */
-public class MergeIntervals {
+public class InsertInterval {
 
     private static int[][] source = {{1, 3}, {2, 6}, {8, 10}, {15, 18}};
+    private static int[] newIntervel = {2, 5};
 
     @Test
     public void test() {
-        int[][] merge = merge(source);
-        for (int i = 0; i < merge.length; i++) {
-            System.out.println(Arrays.toString(merge[i]));
+        int[][] insert = insert(source, newIntervel);
+        for (int i = 0; i < insert.length; i++) {
+            System.out.println(Arrays.toString(insert[i]));
         }
     }
 
-    public int[][] merge(int[][] intervals) {
-        List<int[]> inter = Arrays.asList(intervals);
+    // 因为 Interval 是有序的，所以不用排序了
+    public int[][] insert(int[][] intervals, int[] newInterval) {
+        int[][] copy = Arrays.copyOf(intervals, intervals.length + 1);
+        copy[copy.length - 1] = newInterval;
+        List<int[]> inter = Arrays.asList(copy);
         List<int[]> newInter = new ArrayList<>(inter);
         // 对 intelvals 排序，需要按照先比较区间开始，如果相同再比较区间结束，使用默认的排序规则即可
         newInter.sort(Comparator.comparingInt(o -> o[0]));
