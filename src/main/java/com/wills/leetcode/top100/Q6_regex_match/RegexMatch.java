@@ -40,52 +40,58 @@ public class RegexMatch {
      * 输入：s = "ab", p = ".*"
      * 输出：true
      * 解释：".*" 表示可匹配零个或多个（'*'）任意字符（'.'）。
-     *
-     * 教学视频地址： https://leetcode.cn/problems/regular-expression-matching/solution/shi-pin-tu-jie-dong-tai-gui-hua-zheng-ze-biao-da-s/
+     * <p>
+     * 示例4：
+     * 输入 s = "" , p = "a*"
+     * 输出： true
+     * 解释： 因为 *表示匹配0个或者多个之前的元素，所以匹配0个a 所以匹配
+     * <p>
+     * 教学视频地址：
+     * https://leetcode.cn/problems/regular-expression-matching/solution/zheng-ze-biao-da-shi-pi-pei-by-chen-wei-6h9ap/
+     * 情况图片地址：
+     * https://pic.leetcode-cn.com/1637558528-PEDkgF-20211118130839.png
      * 练习地址： https://alchemist-al.com/algorithms/regular-expression
      */
     public boolean isMatch(String s, String p) {
-        boolean[][] dp = new boolean[s.length() + 1][p.length() + 1];
+        int sLen = s.length(), pLen = p.length();
 
-        // 初始条件赋值
+        boolean[][] dp = new boolean[sLen + 1][pLen + 1];
+
+        // 初始化值
         dp[0][0] = true;
-        for (int col = 1; col < dp[0].length; col++) {
-            char ch = p.charAt(col - 1);
-            if (col > 1) {
-                if (ch == '*') {
-                    dp[0][col] = dp[0][col - 2];
-                } else {
-                    dp[0][col] = false;
-                }
-            } else {
-                if (ch == '*') {
-                    dp[0][col] = true;
-                }
+        for (int j = 2; j < pLen + 1; j++) {
+            if (p.charAt(j - 1) == '*') {
+                // 示例4，表示匹配0个前值，所以要 看 前2个的值
+                // 匹配图文的情况1 相当于 * 重复 0 次(表示前面的元素出现了0次)
+                dp[0][j] = dp[0][j - 2];
             }
         }
 
-        // 进行遍历判断
-        for (int row = 1; row < dp.length; row++) {
-            char ch1 = s.charAt(row - 1);
-            for (int col = 1; col < dp[row].length; col++) {
-                char ch2 = p.charAt(col - 1);
-                if (ch1 == ch2 || ch2 == '.') {
-                    dp[row][col] = dp[row - 1][col - 1];
-                } else if (ch2 == '*') {
-                    if (col > 1) {
-                        if (dp[row][col - 2]) {
-                            dp[row][col] = true; // * 前面的字符出现0次
-                        } else {
-                            char prev = p.charAt(col - 2);
-                            if (prev == ch1 || prev == '.') {
-                                dp[row][col] = dp[row - 1][col]; // * 前面的字符出现多次
-                            }
-                        }
+        // i - 1 表示当前遍历的字符 / j - 1 表示当前遍历的正则表达式的字符
+        for (int i = 1; i < sLen + 1; i++) {
+            for (int j = 1; j < pLen + 1; j++) {
+                // 如果相同 或者是 . 的情况，那么就与之前一个相匹配
+                // 匹配情况2 表示匹配一个的情况（.）
+                if (s.charAt(i - 1) == p.charAt(j - 1) || p.charAt(j - 1) == '.') {
+                    dp[i][j] = dp[i - 1][j - 1];
+                } else if (p.charAt(j - 1) == '*') { // 如果是 * 的情况，就要继续判断
+                    // 如果 当前遍历与正则表达式的前一个字符匹配 或者 正则表达式前一个字符是 .
+                    if (s.charAt(i - 1) == p.charAt(j - 2) || p.charAt(j - 2) == '.') {
+                        // 匹配情况3 s在 i - 1位置 与 p 的 j - 2 位置相匹配
+                        // dp[i - 1][j] 表示 s向前看一个位置，相当于 * 重复了 0 次
+                        // dp[i][j - 1] 表示 p向前看一个位置，相当于 * 重复了 1 次
+                        // dp[i][j - 2] 表示 p往前看两个位置，相当于 * 重复了 2 次
+                        dp[i][j] = dp[i - 1][j] || dp[i][j - 1] || dp[i][j - 2];
+                    } else {
+                        // 匹配情况4 * 重复0次
+                        dp[i][j] = dp[i][j - 2];
                     }
+                } else { // 否则肯定就是不匹配了
+                    dp[i][j] = false;
                 }
+
             }
         }
-        boolean[] lastRow = dp[dp.length-1];
-        return lastRow[lastRow.length - 1];
+        return dp[sLen][pLen];
     }
 }

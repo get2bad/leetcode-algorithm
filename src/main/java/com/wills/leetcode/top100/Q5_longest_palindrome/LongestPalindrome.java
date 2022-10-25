@@ -81,15 +81,17 @@ public class LongestPalindrome {
 
         boolean[][] dp = new boolean[strLen][strLen];
 
-        for (int r = 1; r < strLen; r++) {
-            for (int l = 0; l < r; l++) {
-                // dp[l + 1][r - 1] 代表前一次的最后一次遍历是否为回文字符串,因为 l 在外层循环时都会重置
-                if (s.charAt(l) == s.charAt(r) && (r - l <= 2 || dp[l + 1][r - 1])) {
-                    dp[l][r] = true;
-                    if (r - l + 1 > maxLen) {
-                        maxLen = r - l + 1;
-                        maxStart = l;
-                        maxEnd = r;
+        for (int right = 1; right < strLen; right++) {
+            for (int left = 0; left < right; left++) {
+                // dp[left + 1][right - 1] 代表前一次的最后一次遍历是否为回文字符串,因为 left 在外层循环时都会重置
+                // 因为 left 和 right 代表的字符相同，并且 left 后一个字符和 right 前面的一个字符是回文字符串，所以dp[left][right] = true
+                // right - left <= 2 表示的是 aa bb 这种情况，肯定就是回文字符串
+                if (s.charAt(left) == s.charAt(right) && (right - left <= 2 || dp[left + 1][right - 1])) {
+                    dp[left][right] = true;
+                    if (right - left + 1 > maxLen) {
+                        maxLen = right - left + 1;
+                        maxStart = left;
+                        maxEnd = right;
                     }
                 }
             }
