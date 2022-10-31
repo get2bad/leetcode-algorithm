@@ -82,3 +82,5 @@ fabric.properties
 !/.idea/git_toolbox_prj.xml
 !/.idea/git_toolbox_prj.xml
 !/.idea/git_toolbox_prj.xml
+!/.idea/
+!/leetcode-algorithm.iml
