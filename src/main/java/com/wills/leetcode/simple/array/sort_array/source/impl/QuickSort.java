@@ -50,22 +50,23 @@ public class QuickSort implements Sort {
         int pointer = left;
         // 遍历数组中的所有元素，将比中心元素大的放在右边，比中心元素小的放在左边
         for (int i = left; i < right; i++) {
-            if (array[i] <= pivot) {
+            if (pivot >= array[i]) {
                 // 将比中心元素小的元素和指针指向的元素交换位置
                 // 如果第一个元素比中心元素小，这里就是自己和自己交换位置，指针和索引都向下一位移动
                 // 如果元素比中心元素大，索引向下移动，指针指向这个较大的元素，直到找到比中心元素小的元素，并交换位置，指针向下移动
-                int temp = array[i];
-                array[i] = array[pointer];
-                array[pointer] = temp;
-                pointer++;
+                swap(array,i,pointer++);
             }
             System.out.println(Arrays.toString(array));
         }
         // 将中心元素和指针指向的元素交换位置
         // 将基准值放到中间，用来区分 左边是比基准值小的，右边是比基准值大的
-        int temp = array[pointer];
-        array[pointer] = array[right];
-        array[right] = temp;
+        swap(array,pointer,right);
         return pointer;
+    }
+
+    public void swap(int[] nums, int index1, int index2) {
+        int tmp = nums[index1];
+        nums[index1] = nums[index2];
+        nums[index2] = tmp;
     }
 }
