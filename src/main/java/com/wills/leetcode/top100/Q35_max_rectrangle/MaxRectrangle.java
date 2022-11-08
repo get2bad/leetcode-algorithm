@@ -35,6 +35,7 @@ public class MaxRectrangle {
      * 输入： heights = [2,4]
      * 输出： 4
      */
+    // 单调栈
     public int largestRectangleArea(int[] heights) {
         if (heights.length == 0) return 0;
         int max = 0, len = heights.length, index = 1;
@@ -44,8 +45,8 @@ public class MaxRectrangle {
         stack.push(0);
         while (index < arr.length) {
             stack.push(index++);
-            // arr[index] < arr[stack.peek()] 如果 后一个比前一个小
-            while (index < arr.length && arr[index] < arr[stack.peek()]) {
+            // arr[index] < arr[stack.peek()] 如果 前一个比后一个大
+            while (index < arr.length && arr[stack.peek()] > arr[index]) {
                 int curHeight = arr[stack.pop()];
                 max = Math.max(max, curHeight * (index - stack.peek() - 1));
             }
