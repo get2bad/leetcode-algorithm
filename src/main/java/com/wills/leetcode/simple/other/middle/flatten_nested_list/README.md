@@ -28,7 +28,7 @@
 
 然后要有hasNext 和 next，我们可以使用数据结构 ```队列的容量和出队列```来解决，书写的代码一次性通过！特别开心！菜鸟终于有了提高~
 
-![](http://image.tinx.top/img20210323103558.png)
+![](http://rloqc3ngo.hd-bkt.clouddn.com/img20210323103558.png)
 
 答案:
 

@@ -79,4 +79,4 @@ public static String convert(String s, int numRows) {
 
  完美AC！
 
-![image-20220301113239800](http://image.tinx.top/image-20220301113239800.png)
+![image-20220301113239800](http://rloqc3ngo.hd-bkt.clouddn.com/image-20220301113239800.png)

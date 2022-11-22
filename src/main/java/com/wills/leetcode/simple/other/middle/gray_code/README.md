@@ -69,4 +69,4 @@ public static List<Integer> grayCode(int n) {
 
 最后成功AC！
 
-![image-20220108143816353](http://image.tinx.top/image-20220108143816353.png)
+![image-20220108143816353](http://rloqc3ngo.hd-bkt.clouddn.com/image-20220108143816353.png)

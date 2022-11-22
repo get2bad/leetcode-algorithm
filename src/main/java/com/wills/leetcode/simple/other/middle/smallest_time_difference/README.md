@@ -40,7 +40,7 @@ public static int findMinDifference1(List<String> timePoints) {
 
 然后提示找不到这个类。。。。只能找其他出路
 
-![image-20220118105510197](http://image.tinx.top/image-20220118105510197.png)
+![image-20220118105510197](http://rloqc3ngo.hd-bkt.clouddn.com/image-20220118105510197.png)
 
 所以又想到了一个新的出路，就是将小时转换为分钟，然后进行最小值处理，求两者差值，直接返回即可。
 
@@ -67,7 +67,7 @@ public static int findMinDifference(List<String> timePoints) {
 
 最终，终于AC！！！
 
-![image-20220118105640273](http://image.tinx.top/image-20220118105640273.png)
+![image-20220118105640273](http://rloqc3ngo.hd-bkt.clouddn.com/image-20220118105640273.png)
 
 我们来看一下官方的另外一种解法：
 

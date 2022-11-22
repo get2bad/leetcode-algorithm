@@ -33,7 +33,7 @@
 
 核心代码为： int mid = left + (right - left) / 2; 
 
-![](http://image.tinx.top/20210618122346.png)
+![](http://rloqc3ngo.hd-bkt.clouddn.com/20210618122346.png)
 
 ```java
 public static int firstBadVersion(int n) {

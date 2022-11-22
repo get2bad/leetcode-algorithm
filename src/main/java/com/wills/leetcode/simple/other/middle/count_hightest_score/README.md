@@ -12,7 +12,7 @@
 
 **示例 1:**
 
-![example-1](http://image.tinx.top/example-1.png)
+![example-1](http://rloqc3ngo.hd-bkt.clouddn.com/example-1.png)
 
 ```
 输入：parents = [-1,2,0,2,0]
@@ -28,7 +28,7 @@
 
 **示例 2：**
 
-![example-2](http://image.tinx.top/example-2.png)
+![example-2](http://rloqc3ngo.hd-bkt.clouddn.com/example-2.png)
 
 ```
 输入：parents = [-1,2,0]

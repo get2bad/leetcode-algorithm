@@ -4,7 +4,7 @@
 
 给出数字到字母的映射如下（与电话按键相同）。注意 1 不对应任何字母。
 
-![img](http://image.tinx.top/200px-telephone-keypad2svg.png)
+![img](http://rloqc3ngo.hd-bkt.clouddn.com/200px-telephone-keypad2svg.png)
 
  
 

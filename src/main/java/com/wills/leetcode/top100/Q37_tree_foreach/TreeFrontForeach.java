@@ -1,4 +1,4 @@
-package com.wills.leetcode.top100.tree_front_foreach;
+package com.wills.leetcode.top100.Q37_tree_foreach;
 
 import com.wills.leetcode.simple.common.TreeNode;
 import org.junit.Test;

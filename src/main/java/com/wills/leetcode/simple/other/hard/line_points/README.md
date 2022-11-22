@@ -6,7 +6,7 @@
 
 **示例 1：**
 
-<img src="http://image.tinx.top/20210624092020.png" style="zoom:50%;" />
+<img src="http://rloqc3ngo.hd-bkt.clouddn.com/20210624092020.png" style="zoom:50%;" />
 
 ```
 输入：points = [[1,1],[2,2],[3,3]]
@@ -15,7 +15,7 @@
 
 **示例 2：**
 
-<img src="http://image.tinx.top/20210624092048.png" style="zoom:50%;" />
+<img src="http://rloqc3ngo.hd-bkt.clouddn.com/20210624092048.png" style="zoom:50%;" />
 
 ```
 输入：points = [[1,1],[3,2],[5,3],[4,1],[2,3],[1,4]]

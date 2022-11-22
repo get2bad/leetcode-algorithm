@@ -41,7 +41,7 @@
 
 刚看到这道题就觉得似曾相识，这不是求连续的子数组么？我们可以直接套用前缀和 + 暴力法来搞定,但是可惜的是最终以超时告终(尴尬😓....)
 
-![](http://image.tinx.top/20210602094628.png)
+![](http://rloqc3ngo.hd-bkt.clouddn.com/20210602094628.png)
 
 ```java
 public static boolean checkSubarraySum(int[] nums, int k) {
@@ -78,7 +78,7 @@ public static boolean checkSubarraySum(int[] nums, int k) {
   且 两下标之间，相差距离大于2
   那么，表示 两下标之间 的 连续子数组，为 k的倍数
 
-![](http://image.tinx.top/20210602103842.png)
+![](http://rloqc3ngo.hd-bkt.clouddn.com/20210602103842.png)
 
 ```java
 public static boolean checkSubarraySum1(int[] nums, int k) {
@@ -174,7 +174,7 @@ public static boolean checkSubarraySum1(int[] nums, int k) {
 7. map => 不变 | ans = 6
 8. 返回 ans = 6
 
-![](http://image.tinx.top/20210603114932.png)
+![](http://rloqc3ngo.hd-bkt.clouddn.com/20210603114932.png)
 
 ```java
 public static int findMaxLength(int[] nums) {

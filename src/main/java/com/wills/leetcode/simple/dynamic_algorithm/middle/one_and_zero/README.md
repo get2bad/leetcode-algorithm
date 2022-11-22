@@ -123,7 +123,7 @@ public int findMaxForm(String[] strs, int m, int n) {
 
 2. 状态转移方程
 
-   ![](http://image.tinx.top/20210606092226.png)
+   ![](http://rloqc3ngo.hd-bkt.clouddn.com/20210606092226.png)
 
 3. 边界
 
@@ -194,7 +194,7 @@ dp的最终结果(以题目示例1举例)：
 
 最终返回的是 最后一项的 5 = {int[4]@487} [1, 2, 3, 4] 最后一项 4，是最终结果
 
-<img src="http://image.tinx.top/20210606094043.png" style="zoom:50%;" />
+<img src="http://rloqc3ngo.hd-bkt.clouddn.com/20210606094043.png" style="zoom:50%;" />
 
 ```java
 public int findMaxForm(String[] strs, int m, int n) {

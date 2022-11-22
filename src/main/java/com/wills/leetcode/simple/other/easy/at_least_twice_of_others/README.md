@@ -53,4 +53,4 @@ public static int dominantIndex(int[] nums) {
 
 简简单单
 
-![image-20220113112610864](http://image.tinx.top/image-20220113112610864.png)
+![image-20220113112610864](http://rloqc3ngo.hd-bkt.clouddn.com/image-20220113112610864.png)

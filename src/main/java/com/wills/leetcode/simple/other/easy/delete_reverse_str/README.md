@@ -62,4 +62,4 @@ public static int removePalindromeSub(String s) {
 
 最终成功AC！遇到简单题就是快哉快哉~
 
-![image-20220122095827381](http://image.tinx.top/image-20220122095827381.png)
+![image-20220122095827381](http://rloqc3ngo.hd-bkt.clouddn.com/image-20220122095827381.png)

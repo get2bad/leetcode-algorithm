@@ -31,7 +31,7 @@
 
 1. 我们知道当区间的两边字符相同时(`aba`), 它的打印次数可以从它的更小一层的子区间的打印次数而来
 2. 当区间两边字符不同时(`abab`)，它的打印次数会取其子区间中的最优解，这一部分我们需要枚举所有的可能性
-   ![](http://image.tinx.top/20210524110140.png)
+   ![](http://rloqc3ngo.hd-bkt.clouddn.com/20210524110140.png)
 
 
 
@@ -47,7 +47,7 @@
 
 + 状态转移公式
 
-![](http://image.tinx.top/20210524105145.png)
+![](http://rloqc3ngo.hd-bkt.clouddn.com/20210524105145.png)
 
 
 
@@ -64,7 +64,7 @@
 
    以`abab`做一次示例：
 
-   ![](http://image.tinx.top/20210524105426.png)
+   ![](http://rloqc3ngo.hd-bkt.clouddn.com/20210524105426.png)
 
 ```java
 public static int strangePrinter(String s) {

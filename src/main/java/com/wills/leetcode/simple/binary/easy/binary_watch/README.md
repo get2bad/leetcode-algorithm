@@ -4,7 +4,7 @@
 
 - 例如，下面的二进制手表读取 `"3:25"` 。
 
-<img src="http://image.tinx.top/20210621184216.png" style="zoom: 50%;" />
+<img src="http://rloqc3ngo.hd-bkt.clouddn.com/20210621184216.png" style="zoom: 50%;" />
 
 *（图源：[WikiMedia - Binary clock samui moon.jpg](https://commons.m.wikimedia.org/wiki/File:Binary_clock_samui_moon.jpg) ，许可协议：[Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)](https://creativecommons.org/licenses/by-sa/3.0/deed.en) ）*
 

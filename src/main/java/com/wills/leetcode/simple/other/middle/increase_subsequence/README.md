@@ -22,7 +22,7 @@
 
 一开始还以为是构建连续递增的子序列呢，就胡乱写了个，没想到失败了(要怪就怪题目没说明白，力扣出的题 “is like a shit”，好多题题目都没描述清楚，给的示例都没包含)，看到提交报错以及相关用例，我就知道不是关联的几个元素是递增的就可以了，大意了啊，没有闪！
 
-![image-20220112105512820](http://image.tinx.top/image-20220112105512820.png)
+![image-20220112105512820](http://rloqc3ngo.hd-bkt.clouddn.com/image-20220112105512820.png)
 
 然后吭哧吭哧做了一顿。。。。用了栈、队列啥的，做的不太对，丢人的看了答案，发现这么简单，我们使用贪心算法，步骤大致为：
 
@@ -62,7 +62,7 @@ public static boolean increasingTriplet(int[] nums) {
 
 最终用抄来的代码成功AC！囧
 
-![image-20220112113617451](http://image.tinx.top/image-20220112113617451.png)
+![image-20220112113617451](http://rloqc3ngo.hd-bkt.clouddn.com/image-20220112113617451.png)
 
 也看到了一个新的思路，下面是大致步骤和代码：
 

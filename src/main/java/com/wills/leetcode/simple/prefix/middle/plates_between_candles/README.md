@@ -12,7 +12,7 @@
 
 **示例 1:**
 
-![ex-1](http://image.tinx.top/ex-1.png)
+![ex-1](http://rloqc3ngo.hd-bkt.clouddn.com/ex-1.png)
 
 ```
 输入：s = "**|**|***|", queries = [[2,5],[5,9]]
@@ -24,7 +24,7 @@
 
 **示例 2:**
 
-![ex-2](http://image.tinx.top/ex-2.png)
+![ex-2](http://rloqc3ngo.hd-bkt.clouddn.com/ex-2.png)
 
 ```
 输入：s = "***|**|*****|**||**|*", queries = [[1,17],[4,5],[14,17],[5,11],[15,16]]
@@ -72,7 +72,7 @@ public static int getCount(String s){
 
 果不其然，超时了，给的用例真的太多了 -__-
 
-![image-20220309110849288](http://image.tinx.top/image-20220309110849288.png)
+![image-20220309110849288](http://rloqc3ngo.hd-bkt.clouddn.com/image-20220309110849288.png)
 
 
 

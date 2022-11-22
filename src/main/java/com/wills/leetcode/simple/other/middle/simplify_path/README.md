@@ -66,4 +66,4 @@ public static String simplifyPath(String path) {
 
 最终成功AC！
 
-![image-20220106114456061](http://image.tinx.top/image-20220106114456061.png)
+![image-20220106114456061](http://rloqc3ngo.hd-bkt.clouddn.com/image-20220106114456061.png)

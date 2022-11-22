@@ -216,7 +216,7 @@ private static int update(Deque<String> deque, Map<String, Integer> cur, Map<Str
 
 A*算法通过下面这个函数来计算每个节点的优先级:
 
-![](http://image.tinx.top/20210625164829.png)
+![](http://rloqc3ngo.hd-bkt.clouddn.com/20210625164829.png)
 
 其中：
 

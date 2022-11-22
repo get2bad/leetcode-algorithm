@@ -6,7 +6,7 @@
 
 **示例 1：**
 
-<img src="http://image.tinx.top/20210605093456.png" style="zoom:50%;" />
+<img src="http://rloqc3ngo.hd-bkt.clouddn.com/20210605093456.png" style="zoom:50%;" />
 
 ```
 输入：head = [1,2,6,3,4,5,6], val = 6
@@ -58,7 +58,7 @@ public ListNode removeElements1(ListNode head, int val) {
 
 对于简单题，直接递归重拳出击.
 
-<img src="http://image.tinx.top/20210605093807.png" style="zoom:67%;" />
+<img src="http://rloqc3ngo.hd-bkt.clouddn.com/20210605093807.png" style="zoom:67%;" />
 
 ```java
 // 递归

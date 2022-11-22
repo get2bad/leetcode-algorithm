@@ -56,4 +56,4 @@ public static boolean isIsomorphic(String s, String t) {
 
 最后简简单单的AC！
 
-![image-20220111140729196](http://image.tinx.top/image-20220111140729196.png)
+![image-20220111140729196](http://rloqc3ngo.hd-bkt.clouddn.com/image-20220111140729196.png)

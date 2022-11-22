@@ -82,4 +82,4 @@ AB -> 28
 
   简简单单完成任务！成功AC！
 
-  ![image-20220117160538726](http://image.tinx.top/image-20220117160538726.png)
+  ![image-20220117160538726](http://rloqc3ngo.hd-bkt.clouddn.com/image-20220117160538726.png)

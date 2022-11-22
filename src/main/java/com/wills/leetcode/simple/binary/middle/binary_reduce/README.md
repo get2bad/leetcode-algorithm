@@ -52,7 +52,7 @@ private static int getHamm(int x,int y){
 
 下面，我们参考[宫水三叶](https://leetcode-cn.com/u/ac_oier/)大姐头提供的图：
 
-![](http://image.tinx.top/20210528114032.png)
+![](http://rloqc3ngo.hd-bkt.clouddn.com/20210528114032.png)
 
 ```java
 public int totalHammingDistance1(int[] nums) {

@@ -52,7 +52,7 @@
 
 2. 终止边界，找到状态转移方程
 
-![](http://image.tinx.top/20210521102727.png)
+![](http://rloqc3ngo.hd-bkt.clouddn.com/20210521102727.png)
 
 
 

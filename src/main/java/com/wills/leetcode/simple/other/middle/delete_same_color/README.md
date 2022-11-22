@@ -76,4 +76,4 @@ public boolean winnerOfGame(String colors) {
 
 最后成功AC！
 
-![image-20220322114407418](http://image.tinx.top/image-20220322114407418.png)
+![image-20220322114407418](http://rloqc3ngo.hd-bkt.clouddn.com/image-20220322114407418.png)

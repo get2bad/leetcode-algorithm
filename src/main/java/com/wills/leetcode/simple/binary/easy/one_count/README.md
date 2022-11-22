@@ -63,7 +63,7 @@ public static int hammingWeight(int n) {
 
 ## 位运算法
 
-<img src="http://image.tinx.top/20210623184521.png" style="zoom:50%;" />
+<img src="http://rloqc3ngo.hd-bkt.clouddn.com/20210623184521.png" style="zoom:50%;" />
 
 二选一
 

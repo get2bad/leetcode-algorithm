@@ -92,7 +92,7 @@ public static long subArrayRanges(int[] nums) {
 
 ## 单调栈法(难)
 
-![image-20220305101511015](http://image.tinx.top/image-20220305101511015.png)
+![image-20220305101511015](http://rloqc3ngo.hd-bkt.clouddn.com/image-20220305101511015.png)
 
 ```java
 static int n;
@@ -126,7 +126,7 @@ static long[] getCnt(int[] nums, boolean isMin) {
 
 ## 区间 DP（预处理）跟暴力法相仿，可以忽略
 
-![image-20220305100001490](http://image.tinx.top/image-20220305100001490.png)
+![image-20220305100001490](http://rloqc3ngo.hd-bkt.clouddn.com/image-20220305100001490.png)
 
 代码的三维数组并不是很难理解，可以理解为{[0,0,0],[0,0,0],[0,0,0]},在这个二维数组每一个元素0后面又多出来两个元素，可以理解为一个长方体，其中多出来这两个元素，表示当前元素遍历时的最大/最小值
 

@@ -4,7 +4,7 @@
 
 如下面的两个链表**：**
 
-![](http://image.tinx.top/20210604211401.png)
+![](http://rloqc3ngo.hd-bkt.clouddn.com/20210604211401.png)
 
 在节点 c1 开始相交。
 
@@ -12,7 +12,7 @@
 
 **示例 1：**
 
-![](http://image.tinx.top/20210604211421.png)
+![](http://rloqc3ngo.hd-bkt.clouddn.com/20210604211421.png)
 
 ```
 输入：intersectVal = 8, listA = [4,1,8,4,5], listB = [5,0,1,8,4,5], skipA = 2, skipB = 3
@@ -24,7 +24,7 @@
 
 **示例 2：**
 
-![](http://image.tinx.top/20210604211445.png)
+![](http://rloqc3ngo.hd-bkt.clouddn.com/20210604211445.png)
 
 ```
 输入：intersectVal = 2, listA = [0,9,1,2,4], listB = [3,2,4], skipA = 3, skipB = 1
@@ -36,7 +36,7 @@
 
 **示例 3：**
 
-![](http://image.tinx.top/20210604211504.png)
+![](http://rloqc3ngo.hd-bkt.clouddn.com/20210604211504.png)
 
 ```
 输入：intersectVal = 0, listA = [2,6,4], listB = [1,5], skipA = 3, skipB = 2

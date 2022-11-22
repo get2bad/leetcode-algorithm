@@ -96,4 +96,4 @@ public static boolean stoneGameIX(int[] stones) {
 
 经过以上的讨论与解析，终于成功AC！不过很遗憾，今天每日一题挑战以失败告终！让我们再接再厉吧！
 
-![image-20220120112050972](http://image.tinx.top/image-20220120112050972.png)
+![image-20220120112050972](http://rloqc3ngo.hd-bkt.clouddn.com/image-20220120112050972.png)

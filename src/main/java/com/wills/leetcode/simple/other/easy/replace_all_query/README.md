@@ -61,4 +61,4 @@ public static String modifyString(String s) {
 
 根据上述步骤，很容易就AC了！🎉
 
-![image-20220105120055025](http://image.tinx.top/image-20220105120055025.png)
+![image-20220105120055025](http://rloqc3ngo.hd-bkt.clouddn.com/image-20220105120055025.png)
