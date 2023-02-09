@@ -19,6 +19,7 @@ public class QuickSort implements Sort {
     @Test
     public void test() {
         int[] source = {4, 6, 78, 2, 1, 6, 7, 7, 8, 342, 1};
+        System.out.println(Arrays.toString(source));
         quickSort(source, 0, source.length - 1);
         System.out.println("=======================================");
         System.out.println(Arrays.toString(source));
